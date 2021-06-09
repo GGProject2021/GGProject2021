@@ -1,0 +1,22 @@
+.container{
+    margin-top:50px;
+}
+.logo{
+    width:230px;
+}
+.inline_block_left{
+    display:inline-block;
+}
+.inline_block_right{
+    display:inline-block;
+}
+.sidebar{
+    display:flex;
+    justify-content:space-between;
+}
+.nav-item{
+    margin-left:20px;
+}
+#wide-button{
+    width:100px;
+}
