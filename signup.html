@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.2.会員登録ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- 메인 화면 전용 css -->
+        <link href="css/main/main.css" rel="stylesheet" type="text/css" />
+        <!-- !! -->
+
+        <!-- 회원가입 화면 전용 css -->
+        <link rel="stylesheet" type="text/css" href="css/signup/signup.css">
+        <link rel="stylesheet" type="text/css" href="css/login/util.css">
+        <!-- !! -->
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item"><!--signup-->
+                            <button type="button" class="btn">Signup</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <div class="container clearfix" name="content" style="padding-top:10px">
+                <div class="limiter">
+                    <div class="container-login100">
+                        <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
+                            <form class="login100-form validate-form flex-sb flex-w">
+                                <span class="login100-form-title p-b-32">
+                                    Signup
+                                </span>
+            
+                                <!-- 에러메세지표시부분 -->
+            
+                                <span class="txt1 p-b-11">
+                                    User Id
+                                </span>
+                                <div class="wrap-input100 validate-input m-b-12" data-validate = "Username is required">
+                                    <input class="input100" type="text" name="userid" >
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <span class="txt1 p-b-11">
+                                    氏名
+                                </span>
+                                <div class="wrap-input100 validate-input m-b-12" data-validate = "氏名 is required">
+                                    <input class="input100" type="text" name="username" >
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <span class="txt1 p-b-11">
+                                    EMPLOYEE NUMBER
+                                </span>
+                                <div class="wrap-input100 validate-input m-b-12" data-validate = "Employee Number is required">
+                                    <input class="input100" type="text" name="employee_num" >
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <span class="txt1 p-b-11">
+                                    Email
+                                </span>
+                                <div class="wrap-input100 validate-input m-b-12" data-validate = "Email is required">
+                                    <input class="input100" type="text" name="email" >
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <span class="txt1 p-b-11">
+                                    Password
+                                </span>
+                                <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+                                    <input class="input100" type="password" name="password" >
+                                    <span class="focus-input100"></span>
+                                </div>
+
+                                <span class="txt1 p-b-11">
+                                    Password check
+                                </span>
+                                <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+                                    <input class="input100" type="password" name="password_check" >
+                                    <span class="focus-input100"></span>
+                                </div>
+                               
+                                <div>
+                                    <span class="txt1 p-b-11">
+                                        所属組織 & Role
+                                    </span>
+                                    <div class="validate-input m-t-5 m-b-12" data-validate = "所属組織 is required">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
+                                            <label class="custom-control-label txt1" for="1">法人
+                                                <select name="hou_role" class="txt1 m-l-80">
+                                                    <option value="manager">Manager</option>
+                                                    <option value="leader">Leader</option>
+                                                    <option value="member">Member</option>
+                                                    <option value="none">なし</option>
+                                                </select>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
+                                            <label class="custom-control-label txt1" for="2">個人
+                                                <select name="ko_role" class="txt1 m-l-80">
+                                                    <option value="manager">Manager</option>
+                                                    <option value="leader">Leader</option>
+                                                    <option value="member">Member</option>
+                                                    <option value="none">なし</option>
+                                                </select>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
+                                            <label class="custom-control-label txt1" for="3">コア
+                                                <select name="core_role" class="txt1 m-l-80">
+                                                    <option value="manager">Manager</option>
+                                                    <option value="leader">Leader</option>
+                                                    <option value="member">Member</option>
+                                                    <option value="none">なし</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="container-login100-form-btn">
+                                    <button class="login100-form-btn">
+                                        Sign up
+                                    </button>
+                                </div>
+            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content end -->
+
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+        <!-- 회원가입 화면 전용 js -->
+        <script src="js/signup/signup.js"></script>
+        <!-- !! -->
+    </body>
+</html>
