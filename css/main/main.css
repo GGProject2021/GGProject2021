@@ -9,6 +9,17 @@
 }
 .inline_block_right{
     display:inline-block;
+    margin-left:40px;
+}
+.main_left{
+    margin-top:0px;
+    padding-top:0px;
+    display:inline-block;
+    margin-left:100px;
+    margin-right:50px;
+}
+.main_right{
+    display:inline-block;
 }
 .sidebar{
     display:flex;
@@ -17,6 +28,26 @@
 .nav-item{
     margin-left:20px;
 }
-#wide-button{
+#wide_button{
     width:100px;
+}
+.center_div{
+    text-align: center;
+}
+.gray_div{
+    background-color:#e0e0e0;
+    width:fit-content;
+    display: inline-block;
+    padding-top:30px;
+    padding-left:40px;
+    padding-right:40px;
+}
+.btn_is_using{
+    margin-top:7px;
+    background-color: blue;
+    color:white;
+    font-weight:bold;
+    border:0;
+    outline:0;
+
 }
