@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.3. Mypageページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- 메인 화면 전용 css -->
+        <link href="css/main/main.css" rel="stylesheet" type="text/css" />
+        <!-- !! -->
+
+        <!-- 마이페이지 화면 전용 css -->
+        <link rel="stylesheet" type="text/css" href="css/mypage/mypage.css">
+        <!-- !! -->
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <!--
+                        <li class="nav-item">
+                            <button type="button" class="btn_is_using">Team</button>
+                        </li>
+                        -->
+                        <li class="nav-item"><!--signup-->
+                            <button type="button" class="btn">Signup</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <section class="main-content">
+                <div class="limiter">
+                    <div class="row">
+                        <div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden">
+                            <h3 class="text-left">My Page</h3>
+                            <br>
+                            <div class="content-card card mb-5 rounded-lg">
+                                <div class="card-body txt1">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="mb-0 txt2 mr-4">ID</div>
+                                        </div>
+                                        <div class="col-sm-7 text-secondary">
+                                        Panda
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="mb-0 txt2 mr-4">氏名</div>
+                                        </div>
+                                        <div class="col-sm-7 text-secondary">
+                                        パンダ
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="mb-0 txt2 mr-4">社員番号</div>
+                                        </div>
+                                        <div class="col-sm-7 text-secondary">
+                                        0512342
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="mb-0 txt2 mr-4">所属組織 / ROLE</div>
+                                        </div>
+                                        <div class="col-sm-7 text-secondary">
+                                        法人 / Member <br> 個人 / Leader
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="mb-0 txt2 mr-4">E-mail</div>
+                                        </div>
+                                        <div class="col-sm-7 text-secondary">
+                                        panda@rakuten.com
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a class="btn btn-info" href="#">変更</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- content end -->
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+        <!-- 마이페이지 화면 전용 js -->
+        <!-- !! -->
+    </body>
+</html>
