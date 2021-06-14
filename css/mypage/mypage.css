@@ -25,7 +25,8 @@ body {
 }
 
 .content-card {
-	background-color: #f5f5f5;
+	background-color: #e0e0e0;
+	border: #e0e0e0;
 }
 
 .shadow {
