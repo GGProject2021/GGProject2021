@@ -40,6 +40,12 @@ body, html {
 }
 
 /*---------------------------------------------*/
+
+.error {
+	background-color: #eabcbc;
+  width: 100%;
+}
+
 a {
 	font-family: Raleway-Regular;
 	font-size: 14px;
@@ -155,9 +161,9 @@ iframe {
 }
 
 .txt2 {
-  font-family: Raleway-Regular;
+  font-family: Raleway-SemiBold;
   font-size: 13px;
-  color: #999999;
+  color: #555555;
   line-height: 1.4;
 }
 
