@@ -27,7 +27,7 @@
             <!--sidebar-->
             <div class="sidebar">
                 <div name="logo" >
-                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                    <p><a href="main.html"><img class="logo" src="images/Rgroup_logo_2.png"/></a></p>
                 </div>
                 <div name="sidebar">
                     <ul class="nav justify-content-right">
@@ -39,10 +39,10 @@
                         </li>
                         <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
                         <li class="nav-item"><!--signup-->
-                            <button type="button" class="btn">Signup</button>
+                            <button type="button" class="btn_is_using" onclick="location.href='mypage.html'">Mypage</button>
                         </li>
                         <li class="nav-item"><!--login button-->
-                            <button type="button" class="btn btn-primary" style="width:90px">Login</button>
+                            <button type="button" class="btn btn-primary" style="width:90px">Logout</button>
                         </li>
                     </ul>
                 </div>
@@ -126,11 +126,35 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row text-left">
                                 <div class="col-sm-12">
-                                    <a class="btn btn-info float-right" href="#">変更</a>
+                                    <a class="btn btn-info float-right" data-toggle="modal" data-target="#exampleModal" href="#">変更</a>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">confirm</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ユーザー情報変更を完了しました。
+                                        </div>
+                                        <div class="modal-footer">
+                                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal"></button> -->
+                                        <button type="button" class="btn btn-primary" onclick="location.href='#'">確認</button>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
+
+
+
+
                         </div>
                     </div>
                 </div>
