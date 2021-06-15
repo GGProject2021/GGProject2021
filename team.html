@@ -56,7 +56,7 @@
                                 <th><h5>1.個人</h5></th>
                                 <th></th>
                                 <th>
-                                    <button type="button" id="modal_btn" onclick="openTeamsPopUp()" class="btn btn-primary">修正</button>
+                                    <button type="button" id="modal_btn" class="btn btn-primary">修正</button>
                                     <div class="black_bg"></div>
                                     <div class="modal_wrap">
                                         <div>
@@ -79,7 +79,7 @@
                                                         <div style="text-align:right;margin-top: 20px;">
                                                             <!--onsubmit="return confirm('(元の組織名）を（新しい組織名）に修正します。');-->
                                                             <span class="modal_close_button"><button class="btn btn-light" href="#">キャンセル</button></span>
-                                                            <span><button type="button" id="second_modal_btn" onclick="openTeamsPopUp()" class="btn btn-primary">登録</button></span>
+                                                            <span><button type="button" id="second_modal_btn" class="btn btn-primary">登録</button></span>
                                                             <!--작은 팝업-->
                                                             <div class="second_black_bg"></div> 
                                                             <div class="second_modal_wrap">
@@ -106,7 +106,7 @@
                                         </div>
                                     </div> 
 
-                                    <button type="button" id="delete_modal_btn" onclick="openTeamsPopUp()" class="btn btn-primary">削除</button>
+                                    <button type="button" id="delete_modal_btn"class="btn btn-primary">削除</button>
                                         <div class="delete_black_bg"></div> 
                                         <div class="delete_modal_wrap">
                                             <div class="justify">
@@ -145,7 +145,52 @@
                               </tr>
                             </tbody>
                         </table>
-                          <button type="button" name="modal_btn" onclick="onClick()" class="btn btn-success"><b>新しい組織作り</b></button>
+                          <button type="button" id="modal_btn_2" class="btn btn-success"><b>新しい組織作り</b></button>
+                          <div class="black_bg_2"></div>
+                                    <div class="modal_wrap_2">
+                                        <div>
+                                            <div class="justify">
+                                                <div>
+                                                        <h4><b>組織名作成</b></h4>
+                                                </div>
+                                                <div>
+                                                        <div class="modal_close_2"><p><a href="#">x</a></p></div>
+                                                </div>
+                                            </div>
+                                            <div class="errorMsg">
+                                                <p>i'm errorMsg</p>
+                                            </div>
+                                            <div style="text-align:left; width:90% ">
+                                                <div class="form-group">
+                                                    <form value="team_name" >
+                                                        <label for="team_name">組織名</label>
+                                                        <input type="text" class="form-control" id="team_name">
+                                                        <div style="text-align:right;margin-top: 20px;">
+                                                            <!--onsubmit="return confirm('(元の組織名）を（新しい組織名）に修正します。');-->
+                                                            <span class="modal_close_button_2"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                            <span><button type="button" id="second_modal_btn_2" class="btn btn-primary">登録</button></span>
+                                                            <!--작은 팝업-->
+                                                            <div class="second_black_bg_2"></div> 
+                                                            <div class="second_modal_wrap_2">
+                                                                <div class="justify">
+                                                                    <div>
+                                                                        <h4><b>確認メッセージ</b></h4>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="second_modal_close_2"><p><a href="#">x</a></p></div>
+                                                                    </div>
+                                                                </div>
+                                                                <p style="text-align: left;">(元の組織名）を（新しい組織名）に修正します。</p>
+                                                                <div style="text-align:right;margin-top: 20px;">
+                                                                    <span class="second_modal_close_button_2"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                                    <span><button type="submit" id="second_modal_close_button_2" class="btn btn-primary">登録</button></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
                     </div>
                 </div>
             </div>
