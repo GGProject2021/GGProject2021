@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.5.ユーザー権限設定ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- 메인 화면 전용 css -->
+        <link href="css/main/main.css" rel="stylesheet" type="text/css" />
+        <!-- !! -->
+
+        <!-- 유저권한설정 화면 전용 css -->
+        <link rel="stylesheet" type="text/css" href="css/login/util.css">
+        <link rel="stylesheet" type="text/css" href="css/roleSetting/roleSetting.css">
+        <!-- !! -->
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><a href="main.html"><img class="logo" src="images/Rgroup_logo_2.png"/></a></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <!-- User-Management는 manager만 볼 수 있기 때문에 로그아웃상태에선 x -->
+                            <button type="button" class="btn_is_using" onclick="location.href='roleSetting.html'">User-Management</button>
+                        </li>
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item">
+                            <button type="button" class="btn" onclick="location.href='team.html'">Team</button>
+                        </li>
+                        <li class="nav-item"><!--signup-->
+                            <button type="button" class="btn" onclick="location.href='mypage.html'">Mypage</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <section class="main-content">
+                <div class="setting-container p-5 ml-5 mr-5">
+                    <h5 class="text-left">ユーザー権限設定</h5>
+                    <!-- 필터링박스 -->
+                    <div class="filtering-card rounded-lg shadow p-xl-1 mb-4 overflow-hidden">
+                        <!-- 조직 필터링 -->
+                        <div class="filtering">
+                            <div class="txt3 text-left">部署</div>
+                            <span class="custom-checkbox m-l-20">
+                                <input type="checkbox" class="custom-control-input" id="selectAll" name="team_id" value="selectAll" onclick='selectAll(this)'>
+                                <label class="custom-control-label txt1" for="selectAll"><b>全体</b></label>
+                            </span>
+
+                            <span class="custom-checkbox m-l-40">
+                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
+                                <label class="custom-control-label txt1" for="1">法人</label>
+                            </span>
+    
+                            <span class="custom-checkbox m-l-40">
+                                <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
+                                <label class="custom-control-label txt1" for="2">個人</label>
+                            </span>
+    
+                            <span class="custom-checkbox m-l-40">
+                                <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
+                                <label class="custom-control-label txt1" for="3">コア</label>
+                            </span>
+                        </div>
+
+                        <!-- 사원 필터링 -->
+                        <div class="filtering">
+                            <div class="txt3 text-left">社員検索</div>
+                            <input class="form-control form-control-sm txt1" id="username" type="text" name="username" placeholder="Search..">
+                        </div>
+                        
+                        <!-- 기간 오름차순내림차순 필터링 -->
+                        <div class="filtering">
+                            <div class="txt3 text-left">期間順</div>
+                            <div class="form-check form-check-inline txt1">
+                                <input class="form-check-input" type="radio" name="period" id="asc" value="asc">
+                                <label class="form-check-label" for="asc">昇順</label>
+                            </div>
+                            <div class="form-check form-check-inline txt1">
+                                <input class="form-check-input" type="radio" name="period" id="desc" value="desc">
+                                <label class="form-check-label" for="desc">降順</label>
+                            </div>
+                        </div>
+
+                        <div class="filtering float-right">
+                            <button type="button" class="btn filtering-btn txt1" onclick="location.href='#'"><b class="filtering-btn-font">filtering</b></button>
+                        </div>
+                    </div>
+
+                    <!-- 사원리스트 -->
+                    <table class="table role-setting-table">
+                        <thead class="txt3">
+                          <tr>
+                            <th scope="col">氏名</th>
+                            <th scope="col">組織</th>
+                            <th scope="col">Role</th>
+                          </tr>
+                        </thead>
+                        <tbody class="txt1">
+                            <tr>
+                                <td>パンダA</td>
+                                <td>法人</td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input ml-5" type="radio" name="role_id1" value="1">Manager
+                                        <input class="form-check-input ml-5" type="radio" name="role_id1" value="2">Leader
+                                        <input class="form-check-input ml-5" type="radio" name="role_id1" value="3" checked>Member
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>パンダB</td>
+                                <td>個人</td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input ml-5" type="radio" name="role_id2" value="1" checked>Manager
+                                        <input class="form-check-input ml-5" type="radio" name="role_id2" value="2">Leader
+                                        <input class="form-check-input ml-5" type="radio" name="role_id2" value="3">Member
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>パンダC</td>
+                                <td>コア</td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input ml-5" type="radio" name="role_id3" value="1">Manager
+                                        <input class="form-check-input ml-5" type="radio" name="role_id3" value="2" checked>Leader
+                                        <input class="form-check-input ml-5" type="radio" name="role_id3" value="3">Member
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>パンダD</td>
+                                <td>法人</td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input ml-5" type="radio" name="role_id4" value="1">Manager
+                                        <input class="form-check-input ml-5" type="radio" name="role_id4" value="2">Leader
+                                        <input class="form-check-input ml-5" type="radio" name="role_id4" value="3" checked>Member
+                                    </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>パンダE</td>
+                                <td>個人</td>
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input ml-5" type="radio" name="role_id5" value="1">Manager
+                                        <input class="form-check-input ml-5" type="radio" name="role_id5" value="2">Leader
+                                        <input class="form-check-input ml-5" type="radio" name="role_id5" value="3" checked>Member
+                                    </div>
+                                </td>
+                              </tr>
+                        </tbody>
+                      </table>
+
+                    <!-- 버튼 -->
+                        <a class="btn btn-info float-right" data-toggle="modal" data-target="#exampleModal" href="#">変更</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">confirm</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                            変更完了
+                            </div>
+                            <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal"></button> -->
+                            <button type="button" class="btn btn-primary" onclick="location.href='roleSetting.html'">確認</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </section>
+            <!-- content end -->
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+        <!-- 유저권한설정 전용 js -->
+        <script src="js/roleSetting.js/roleSetting.js"></script>
+    </body>
+</html>
