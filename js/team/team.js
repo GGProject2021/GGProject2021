@@ -55,5 +55,6 @@ window.onload = function() {
     document.querySelector('.second_modal_close_button').addEventListener('click', offSecondModifyClick);
     document.querySelector('.second_modal_close_2').addEventListener('click', offSecondCreateClick);
     document.querySelector('.second_modal_close_button_2').addEventListener('click', offSecondCreateClick);
+    document.querySelector('.delete_modal_close').addEventListener('click', offDeleteClick);
     document.querySelector('.delete_modal_close_button').addEventListener('click', offDeleteClick);
 };
