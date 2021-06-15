@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>5.1.組織名閲覧ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="css/team/team.css" rel="stylesheet" type="text/css" />
+  
+        <!--popup-->
+        <script src="js/team/team.js"></script>
+   
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item">
+                            <button type="button" class="btn_is_using">Team</button>
+                        </li>
+                        <li class="nav-item"><!--signup-->
+                            <button type="button" class="btn">Mypage</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <div class="container clearfix" name="content" style="padding-top:30px">
+                <div class="center_div">
+                    <div class="gray_div" name="main_msg">
+                        <h3 style="text-align:left;"><b>TEAM</b> <b style="color:#2ecc71">4</b></h3>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th><h5>1.個人</h5></th>
+                                <th></th>
+                                <th>
+                                    <button type="button" id="modal_btn" class="btn btn-primary">修正</button>
+                                    <div class="black_bg"></div>
+                                    <div class="modal_wrap">
+                                        <div>
+                                            <div class="justify">
+                                                <div>
+                                                        <h4><b>組織名修正</b></h4>
+                                                </div>
+                                                <div>
+                                                        <div class="modal_close"><p><a href="#">x</a></p></div>
+                                                </div>
+                                            </div>
+                                            <div class="errorMsg">
+                                                <p>i'm errorMsg</p>
+                                            </div>
+                                            <div style="text-align:left; width:90% ">
+                                                <div class="form-group">
+                                                    <form value="team_name" >
+                                                        <label for="team_name">組織名</label>
+                                                        <input type="text" class="form-control" id="team_name" value="個人">
+                                                        <div style="text-align:right;margin-top: 20px;">
+                                                            <!--onsubmit="return confirm('(元の組織名）を（新しい組織名）に修正します。');-->
+                                                            <span class="modal_close_button"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                            <span><button type="button" id="second_modal_btn" class="btn btn-primary">登録</button></span>
+                                                            <!--작은 팝업-->
+                                                            <div class="second_black_bg"></div> 
+                                                            <div class="second_modal_wrap">
+                                                                <div class="justify">
+                                                                    <div>
+                                                                        <h4><b>確認メッセージ</b></h4>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="second_modal_close"><p><a href="#">x</a></p></div>
+                                                                    </div>
+                                                                </div>
+                                                                <p style="text-align: left;">(元の組織名）を（新しい組織名）に修正します。</p>
+                                                                <div style="text-align:right;margin-top: 20px;">
+                                                                    <span class="second_modal_close_button"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                                    <span><button type="submit" id="second_modal_close_button" class="btn btn-primary">登録</button></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div> 
+
+                                    <button type="button" id="delete_modal_btn"class="btn btn-primary">削除</button>
+                                        <div class="delete_black_bg"></div> 
+                                        <div class="delete_modal_wrap">
+                                            <div class="justify">
+                                                <div>
+                                                    <h4><b>確認メッセージ</b></h4>
+                                                </div>
+                                            <div>
+                                            <div class="delete_modal_close"><p><a href="#">x</a></p></div>
+                                        </div>
+                                        </div>
+                                        <p style="text-align: left;">(元の組織名）を（新しい組織名）に削除します。</p>
+                                            <div style="text-align:right;margin-top: 20px;">
+                                                <span class="delete_modal_close_button"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                <span><button type="button" id="delete_modal_close_button" class="btn btn-primary">確認</button></span>
+                                            </div>
+                                        </div>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th><h5>2.法人</h5></th>
+                                <th></th>
+                                <th>
+                                    <button type="button" class="btn btn-primary">修正</button>
+                                    <button type="button" class="btn btn-primary">削除</button>
+                                </th>
+                              </tr>
+                              <tr>
+                                <th><h5>3.コア</h5></th>
+                                <th></th>
+                                <th>
+                                    <button type="button" class="btn btn-primary">修正</button>
+                                    <button type="button" class="btn btn-primary">削除</button>
+                                </th>
+                              </tr>
+                            </tbody>
+                        </table>
+                          <button type="button" id="modal_btn_2" class="btn btn-success"><b>新しい組織作り</b></button>
+                          <div class="black_bg_2"></div>
+                                    <div class="modal_wrap_2">
+                                        <div>
+                                            <div class="justify">
+                                                <div>
+                                                        <h4><b>組織名作成</b></h4>
+                                                </div>
+                                                <div>
+                                                        <div class="modal_close_2"><p><a href="#">x</a></p></div>
+                                                </div>
+                                            </div>
+                                            <div class="errorMsg">
+                                                <p>i'm errorMsg</p>
+                                            </div>
+                                            <div style="text-align:left; width:90% ">
+                                                <div class="form-group">
+                                                    <form value="team_name" >
+                                                        <label for="team_name">組織名</label>
+                                                        <input type="text" class="form-control" id="team_name">
+                                                        <div style="text-align:right;margin-top: 20px;">
+                                                            <!--onsubmit="return confirm('(元の組織名）を（新しい組織名）に修正します。');-->
+                                                            <span class="modal_close_button_2"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                            <span><button type="button" id="second_modal_btn_2" class="btn btn-primary">登録</button></span>
+                                                            <!--작은 팝업-->
+                                                            <div class="second_black_bg_2"></div> 
+                                                            <div class="second_modal_wrap_2">
+                                                                <div class="justify">
+                                                                    <div>
+                                                                        <h4><b>確認メッセージ</b></h4>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="second_modal_close_2"><p><a href="#">x</a></p></div>
+                                                                    </div>
+                                                                </div>
+                                                                <p style="text-align: left;">(元の組織名）を（新しい組織名）に修正します。</p>
+                                                                <div style="text-align:right;margin-top: 20px;">
+                                                                    <span class="second_modal_close_button_2"><button class="btn btn-light" href="#">キャンセル</button></span>
+                                                                    <span><button type="submit" id="second_modal_close_button_2" class="btn btn-primary">登録</button></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+    </body>
+</html>
