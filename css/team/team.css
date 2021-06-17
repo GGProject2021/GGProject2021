@@ -73,7 +73,7 @@
     border:0;
     outline:0;
 }
-.modal_wrap{
+.modal_wrap , .modal_wrap_2 {
     display: none;
     width: 600px;
     height: 350px;
@@ -86,7 +86,7 @@
     background:#eee;
     z-index: 2;
 }
-.second_modal_wrap{
+.second_modal_wrap, .second_modal_wrap_2,.delete_modal_wrap{
     display: none;
     width: 500px;
     height: 200px;
@@ -100,21 +100,8 @@
     background:#eee;
     z-index: 2;
 }
-.delete_modal_wrap{
-    display: none;
-    width: 500px;
-    height: 200px;
-    position: absolute;
-    top:60%;
-    left: 50%;
-    padding-top:25px;
-    padding-left:30px;
-    padding-right:40px;
-    margin: -250px 0 0 -250px;
-    background:#eee;
-    z-index: 2;
-}
-.black_bg{
+
+.black_bg, .black_bg_2, .second_black_bg,.second_black_bg_2, .delete_black_bg{
     display: none;
     position: absolute;
     content: "";
@@ -125,48 +112,22 @@
     left: 0;
     z-index: 1;
 }
-.second_black_bg{
-    display: none;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color:rgba(0, 0,0, 0.5);
-    top:0;
-    left: 0;
-    z-index: 1;
-}
-.delete_black_bg{
-    display: none;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color:rgba(0, 0,0, 0.5);
-    top:0;
-    left: 0;
-    z-index: 1;
-}
-.modal_close{
+.modal_close , .modal_close_2{
     font-size:20px;
     width: 26px;
     height: 26px;
     right: 0;
     padding-right:50px;
 }
-.second_modal_close{
+
+.second_modal_close, .second_modal_close_2, .delete_modal_close{
     font-size:20px;
     width: 26px;
     height: 26px;
     right: 0;
 }
-.delete_modal_close{
-    font-size:20px;
-    width: 26px;
-    height: 26px;
-    right: 0;
-}
-.modal_close> a{
+
+.modal_close> a, .modal_close_2> a , .second_modal_close> a,.delete_modal_close> a{
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -175,22 +136,7 @@
     text-decoration: none;
     
 }
-.second_modal_close> a{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    text-indent: -9999px;
-    color:black;
-    text-decoration: none;
-}
-.delete_modal_close> a{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    text-indent: -9999px;
-    color:black;
-    text-decoration: none;   
-}
+
 p a:link{
     color:black;
     text-decoration: none;
