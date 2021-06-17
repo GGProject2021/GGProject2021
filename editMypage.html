@@ -27,7 +27,7 @@
             <!--sidebar-->
             <div class="sidebar">
                 <div name="logo" >
-                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                    <p><a href="main.html"><img class="logo" src="images/Rgroup_logo_2.png"/></a></p>
                 </div>
                 <div name="sidebar">
                     <ul class="nav justify-content-right">
@@ -39,10 +39,10 @@
                         </li>
                         <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
                         <li class="nav-item"><!--signup-->
-                            <button type="button" class="btn">Signup</button>
+                            <button type="button" class="btn_is_using" onclick="location.href='mypage.html'">Mypage</button>
                         </li>
                         <li class="nav-item"><!--login button-->
-                            <button type="button" class="btn btn-primary" style="width:90px">Login</button>
+                            <button type="button" class="btn btn-primary" style="width:90px">Logout</button>
                         </li>
                     </ul>
                 </div>
@@ -54,7 +54,8 @@
                         <div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden">
                             <h5 class="text-left">ユーザー情報変更</h5>
                             <br>
-                            <p class="text-center txt3 mt-1">User ID</p>
+                            <p class="text-center txt3 mt-1">Panda</p>
+                            <p class="text-center txt1 mt-1">Panda@rakuten.com</p>
                             <div class="content-card card mb-2 rounded-lg">
                                 <!-- <validation-errors :errors="validationErrors" v-if="validationErrors"></validation-errors> -->
                                 <!-- 에러 메시지 표시 부분 -->
@@ -70,12 +71,12 @@
                                             <div class="mb-2 txt2 text-left">所属組織 / ROLE</div>
 
                                             <div class="custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
+                                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1" checked>
                                                 <label class="custom-control-label txt1" for="1">法人
-                                                    <select name="hou_role" class="txt1 m-l-50">
+                                                    <select name="hou_role" class="txt1 m-l-50" disabled>
                                                         <option value="manager">Manager</option>
                                                         <option value="leader">Leader</option>
-                                                        <option value="member">Member</option>
+                                                        <option value="member" selected>Member</option>
                                                         <option value="none">なし</option>
                                                     </select>
                                                 </label>
@@ -84,11 +85,11 @@
                                             <div class="custom-checkbox m-d-1">
                                                 <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
                                                 <label class="custom-control-label txt1" for="2">個人
-                                                    <select name="ko_role" class="txt1 m-l-50">
+                                                    <select name="ko_role" class="txt1 m-l-50" disabled>
                                                         <option value="manager">Manager</option>
                                                         <option value="leader">Leader</option>
                                                         <option value="member">Member</option>
-                                                        <option value="none">なし</option>
+                                                        <option value="none" selected>なし</option>
                                                     </select>
                                                 </label>
                                             </div>
@@ -96,11 +97,11 @@
                                             <div class="custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
                                                 <label class="custom-control-label txt1" for="3">コア
-                                                    <select name="core_role" class="txt1 m-l-50">
+                                                    <select name="core_role" class="txt1 m-l-50" disabled>
                                                         <option value="manager">Manager</option>
                                                         <option value="leader">Leader</option>
                                                         <option value="member">Member</option>
-                                                        <option value="none">なし</option>
+                                                        <option value="none" selected>なし</option>
                                                     </select>
                                                 </label>
                                             </div>
@@ -126,11 +127,35 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row text-left">
                                 <div class="col-sm-12">
-                                    <a class="btn btn-info float-right" href="#">変更</a>
+                                    <a class="btn btn-info float-right" data-toggle="modal" data-target="#exampleModal" href="#">変更</a>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">confirm</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        ユーザー情報変更を完了しました。
+                                        </div>
+                                        <div class="modal-footer">
+                                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal"></button> -->
+                                        <button type="button" class="btn btn-primary" onclick="location.href='mypage.html'">確認</button>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
+
+
+
+
                         </div>
                     </div>
                 </div>

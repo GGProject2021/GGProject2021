@@ -100,6 +100,7 @@
     background:#eee;
     z-index: 2;
 }
+
 .black_bg, .black_bg_2, .second_black_bg,.second_black_bg_2, .delete_black_bg{
     display: none;
     position: absolute;
@@ -118,12 +119,14 @@
     right: 0;
     padding-right:50px;
 }
+
 .second_modal_close, .second_modal_close_2, .delete_modal_close{
     font-size:20px;
     width: 26px;
     height: 26px;
     right: 0;
 }
+
 .modal_close> a, .modal_close_2> a , .second_modal_close> a,.delete_modal_close> a{
     display: inline-block;
     width: 100%;
@@ -133,6 +136,7 @@
     text-decoration: none;
     
 }
+
 p a:link{
     color:black;
     text-decoration: none;

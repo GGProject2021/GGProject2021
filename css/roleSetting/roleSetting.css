@@ -4,6 +4,13 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
+.row {
+    padding: 15px;
+}
+
+.main-content {
+    padding-top: 0;
+}
 .limiter {
 	width: 100%;  
 	min-height: 70vh;
@@ -20,13 +27,40 @@ body {
 	background-color: #ffffff;
 }
 
-.profile-card {
+/* .profile-card {
 	background-color: #e0e0e0;
+} */
+
+.filtering-card {
+    justify-content: center;
+	align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.content-card {
-	background-color: #e0e0e0;
-	border: #e0e0e0;
+.filtering {
+    /* display: inline-block; */
+	align-items: center;
+    float: left;
+    margin: 15px 30px;
+}
+
+.filtering-btn {
+    background-color: rgb(95, 95, 95);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.filtering-btn-font {
+    color: white;
+    margin: 10px;
+}
+
+.role-setting-table {
+    text-align: center;
 }
 
 .shadow {
@@ -56,8 +90,8 @@ body {
 
   .txt3 {
 	font-family: Raleway-SemiBold;
-	font-size: 17px;
-	font-weight: 700;
+	font-size: 15px;
+	font-weight:700;
 	color: #555555;
 	line-height: 1.4;
 	/* text-transform: uppercase; */
