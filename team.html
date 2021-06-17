@@ -27,7 +27,10 @@
                 <div name="sidebar">
                     <ul class="nav justify-content-right">
                         <li class="nav-item"><!--sprint-->
-
+                            <!-- User-Management는 manager만 볼 수 있기 때문에 로그아웃상태에선 x -->
+                            <button type="button" class="btn" onclick="location.href='roleSetting.html'">User-Management</button>
+                        </li>
+                        <li class="nav-item"><!--sprint-->
                             <button type="button" class="btn">Sprint</button>
                         </li>
                         <li class="nav-item"><!--GG-->
@@ -39,10 +42,10 @@
                         </li>
                         <li class="nav-item"><!--signup-->
 
-                            <button type="button" class="btn">Mypage</button>
+                            <button type="button" class="btn" onclick="location.href='mypage.html'">Mypage</button>
                         </li>
                         <li class="nav-item"><!--login button-->
-                            <button type="button" class="btn btn-primary" style="width:90px">Logout</button>
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='main.html'">Logout</button>
                         </li>
                     </ul>
                 </div>
