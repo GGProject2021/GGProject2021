@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.2.GG作成ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="css/GG/createGG.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item"><!--signup-->
+
+                            <button type="button" class="btn" onclick="location.href='signup.html'">Signup</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='login.html'">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <div class="container clearfix" name="content" style="padding-top:30px">
+                <H2>GG登録</H2>
+                <p>新しいGGを作成してください!</p>
+                <div class="main_form">
+                    <div class="errorMsg">
+                        <p>I'm errorMSG</p>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <form>
+                            <table class="form_table">
+                                <thead>
+                                <tr>
+                                    <th><label for="dd"><b>fff</b></label></th>
+                                    <th><input type="text" class="form-control" id="dd"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    
+                               </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+    </body>
+</html>
