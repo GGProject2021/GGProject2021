@@ -23,7 +23,10 @@
     display:inline-block;
     width:350px;
 }
-.inline_block_right{
+.inline_block_left{
+    display:inline-block;
+}
+#inline_block_right{
     display:inline-block;
     margin-left:10px;
 }
@@ -35,6 +38,9 @@
     padding-top:10px;
     padding-bottom:10px;
     margin-top:20px;
+}
+.done input{
+    width:100px;
 }
 th .form-control{
     height:28px;
@@ -76,10 +82,10 @@ th .form-control{
 .center_div{
     text-align: center;
 }
-.support_div_2{
+.support_div_2 ,.support_radio_2{
     display: none;
 }
-.support_div_3{
+.support_div_3 , .support_radio_3{
     display: none;
 }
 .btn_is_using{
@@ -91,3 +97,17 @@ th .form-control{
     outline:0;
 
 }
+.done{
+    margin-top:40px;
+    text-align:center;
+    
+}
+.close_support_form_2> a , .close_support_form_3> a{
+    display:inline-block;
+    margin-left:10px;
+    color:red;
+}
+.close_support_form_2> a:link , .close_support_form_3> a:link .close_support_form_2> a:visited , .close_support_form_3> a:visited{
+    color:red;
+}
+
