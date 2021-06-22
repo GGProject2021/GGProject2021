@@ -9,6 +9,9 @@
     padding-bottom:50px;
     box-shadow: 5px 5px 5px grey;
 }
+.form_table{
+    width:100%;
+}
 .logo{
     width:230px;
 }
@@ -28,7 +31,7 @@
 }
 .errorMsg{
     background-color: #eabcbc;
-    width:90%;
+    width:100%;
     text-align:left;
     margin-left:00px;
     margin-right:20px;
