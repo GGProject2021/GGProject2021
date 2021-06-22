@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link href="css/GG/createGG.css" rel="stylesheet" type="text/css" />
     </head>
-
+<!-- if 두번째 타부서가 이비 비지블이면 세번재 타부서 란을 보여주는방식으로 js짜기-->
     <body>
         <!--main-->
         <div class ="container">
@@ -53,14 +53,87 @@
                             <table class="form_table">
                                 <thead>
                                 <tr>
-                                    <th><label for="dd"><b>fff</b></label></th>
-                                    <th><input type="text" class="form-control" id="dd"></th>
+                                    <th class="form_table_th1"><label for="storypoint">story point</label></th>
+                                    <th><input type="text" class="form-control" name="storypoint"></th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    
-                               </tbody>
+                                <tr>
+                                    <th class="form_table_th1"><label for="mitsumori_time"><b>見積もり時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="mitsumori_time"></th>
+                                </tr>
+                                <tr>
+                                    <th class="form_table_th1"><label for="actual_time"><b>実績時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="actual_time"></th>
+                                </tr>
+                                <tr>
+                                    <th class="form_table_th1"><label for="working_hours"><b>稼働時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="working_hours"></th>
+                                </tr>   
+                                <tr>
+                                    <th class="form_table_th1"><label for="business_days"><b>営業日</b></label></th>
+                                    <th><input type="text" class="form-control" name="business_days"></th>
+                                </tr>   
+                                <tr>
+                                    <th class="form_table_th1"><label for="count_ticket"><b>チケット数</b></label></th>
+                                    <th><input type="text" class="form-control" name="count_ticket"></th>
+                                </tr>   
+                                <!--타부서 서포트 시간 --> 
+                                <!--두번까지만 추가 가능하다. 부서가 변경될 경우 이부분도 바로 변경될 수 있도록 실제 개발시 for사용할것-->
+                                <!--input 세개 전부 require =x 로 해놓는다. 다만, 1은 작성하지 않고 2나 3을 작성하여 제출할 시 작성이 되지 않는다.alert 출력-->
+                                <tr>
+                                    <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="support_time"></th>
+                                </tr>
+                                <tr>
+                                    <th class="form_table_th1"></th>
+                                    <th>
+                                        <input type="radio" name="suppot_section" value="consumer_section">個人
+                                        <input type="radio" class="radio_sort" name="suppot_section" value="coporate_section">法人
+                                        <input type="radio" class="radio_sort" name="suppot_section" value="core_section">コア
+                                    </th>
+                                </tr> 
+                                <div class="support_div_2">
+                                    <tr class="support_div_2">
+                                        <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
+                                        <th>
+                                            <input type="text" class="form-control" id="inline_block_left" name="support_time_2">
+                                            <span class="inline_block_right"><a href="#">x</a></span>
+                                        </th>
+                                    </tr>
+                                    <tr class="support_div_2">
+                                        <th class="form_table_th1"></th>
+                                        <th>
+                                            <input type="radio" name="suppot_section_2" value="consumer_section">個人
+                                            <input type="radio" class="radio_sort" name="suppot_section_2" value="coporate_section">法人
+                                            <input type="radio" class="radio_sort" name="suppot_section_2" value="core_section">コア
+                                        </th>
+                                    </tr> 
+                                </div>
+                                <!--두번째 추가 부서-->
+                                <div class="support_div_3">
+                                    <tr class="support_div_3">
+                                        <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
+                                        <th>
+                                            <input type="text" class="form-control" id="inline_block_left" name="support_time_3">
+                                            <span class="inline_block_right"><a href="#">x</a></span>
+                                        </th>
+                                    </tr>
+                                    <tr class="support_div_3">
+                                        <th class="form_table_th1"></th>
+                                        <th>
+                                            <input type="radio" name="suppot_section_3" value="consumer_section">個人
+                                            <input type="radio" class="radio_sort" name="suppot_section_3" value="coporate_section">法人
+                                            <input type="radio" class="radio_sort" name="suppot_section_3" value="core_section">コア
+                                        </th>
+                                    </tr>
+                                </div>
+                                </tbody>
                             </table>
+                            <div class="check_support_time">
+                                <p>他部署をサポートしましたか？</p>
+                                <span class="inline_block_right"><a href="#"><img src="images/plus.png"/>他部署サポート時間追加</a></span>
+                            </div>
                         </form>
                     </div>
                 </div>

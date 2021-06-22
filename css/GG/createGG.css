@@ -3,6 +3,7 @@
     width: 80%;
 }
 .main_form{
+    width: 800px;
     padding-top:50px;
     padding-left:100px;
     padding-right:100px;
@@ -12,15 +13,31 @@
 .form_table{
     width:100%;
 }
+.form_table_th1{
+    width:220px;
+}
 .logo{
     width:230px;
 }
-.inline_block_left{
+#inline_block_left{
     display:inline-block;
+    width:350px;
 }
 .inline_block_right{
     display:inline-block;
-    margin-left:40px;
+    margin-left:10px;
+}
+.check_support_time{
+    background-color: #e0e0e0;
+    width:100%;
+    border-radius:10px 10px 10px 10px;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top:20px;
+}
+th .form-control{
+    height:28px;
 }
 .main_left{
     margin-top:0px;
@@ -34,14 +51,14 @@
     width:100%;
     text-align:left;
     margin-left:00px;
-    margin-right:20px;
-    margin-top:25px;
-    margin-bottom: 20px;
     padding-left:20px;
     padding-top:5px;
     padding-bottom:2px;
     padding-right:20px;
     border-radius:10px 10px 10px 10px;
+}
+.radio_sort{
+    margin-left:40px;
 }
 .main_right{
     display:inline-block;
@@ -59,13 +76,11 @@
 .center_div{
     text-align: center;
 }
-.gray_div{
-    background-color:#e0e0e0;
-    width:fit-content;
-    display: inline-block;
-    padding-top:30px;
-    padding-left:40px;
-    padding-right:40px;
+.support_div_2{
+    display: none;
+}
+.support_div_3{
+    display: none;
 }
 .btn_is_using{
     margin-top:7px;
