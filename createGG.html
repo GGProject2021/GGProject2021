@@ -10,8 +10,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link href="css/GG/createGG.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/GG/createGG.js"></script>
     </head>
-<!-- if 두번째 타부서가 이비 비지블이면 세번재 타부서 란을 보여주는방식으로 js짜기-->
     <body>
         <!--main-->
         <div class ="container">
@@ -93,15 +94,15 @@
                                         <input type="radio" class="radio_sort" name="suppot_section" value="core_section">コア
                                     </th>
                                 </tr> 
-                                <div class="support_div_2">
+                                <div>
                                     <tr class="support_div_2">
                                         <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
                                         <th>
                                             <input type="text" class="form-control" id="inline_block_left" name="support_time_2">
-                                            <span class="inline_block_right"><a href="#">x</a></span>
+                                            <span class="close_support_form_2"><a href="#">x</a></span>
                                         </th>
                                     </tr>
-                                    <tr class="support_div_2">
+                                    <tr class="support_radio_2">
                                         <th class="form_table_th1"></th>
                                         <th>
                                             <input type="radio" name="suppot_section_2" value="consumer_section">個人
@@ -111,15 +112,15 @@
                                     </tr> 
                                 </div>
                                 <!--두번째 추가 부서-->
-                                <div class="support_div_3">
+
                                     <tr class="support_div_3">
                                         <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
                                         <th>
                                             <input type="text" class="form-control" id="inline_block_left" name="support_time_3">
-                                            <span class="inline_block_right"><a href="#">x</a></span>
+                                            <span class="close_support_form_3"><a href="#">x</a></span>
                                         </th>
                                     </tr>
-                                    <tr class="support_div_3">
+                                    <tr class="support_radio_3">
                                         <th class="form_table_th1"></th>
                                         <th>
                                             <input type="radio" name="suppot_section_3" value="consumer_section">個人
@@ -127,12 +128,15 @@
                                             <input type="radio" class="radio_sort" name="suppot_section_3" value="core_section">コア
                                         </th>
                                     </tr>
-                                </div>
+                   
                                 </tbody>
                             </table>
                             <div class="check_support_time">
                                 <p>他部署をサポートしましたか？</p>
-                                <span class="inline_block_right"><a href="#"><img src="images/plus.png"/>他部署サポート時間追加</a></span>
+                                <span id="check_support_time"><a href="#"><img src="images/plus.png"/>他部署サポート時間追加</a></span>
+                            </div>
+                            <div class="done">
+                                <input type="image" src="images/check.png" alt="done">
                             </div>
                         </form>
                     </div>
