@@ -186,13 +186,13 @@ iframe {
   align-items: center;
   padding: 15px;
   
-  background-color: #ebebeb;
+  background-color: #fff;
 }
 
 
 .wrap-login100 {
   width: 560px;
-  background: #fff;
+  background: #e0e0e0;
   border-radius: 10px;
   position: relative;
 }

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+	/* background: #ffffff; */
+	font-family: "Roboto", sans-serif;
+}
+
+.row {
+    padding: 15px;
+}
+
+.main-content {
+    padding-top: 0;
+}
+.limiter {
+	width: 100%;  
+	min-height: 70vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	
+	background-color: #ffffff;
+}
+
+/* .profile-card {
+	background-color: #e0e0e0;
+} */
+
+.filtering-card {
+    justify-content: center;
+	align-items: center;
+    width: 100%;
+    background-color: #e0e0e0;
+    /* text-align: center; */
+    position: relative;
+    overflow: hidden;
+}
+
+.filtering {
+    display: inline-block;
+	align-items: center;
+    float: left;
+    margin: 15px 30px;
+}
+
+.filtering-btn {
+    background-color: rgb(95, 95, 95);
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.filtering-btn-font {
+    color: white;
+    margin: 10px;
+}
+
+.role-setting-table {
+    text-align: center;
+}
+
+.username-place {
+	float: left;
+}
+
+.team_btn {
+	float: left;
+	text-decoration: underline;
+}
+
+.sprint_btn {
+	text-align: right;
+	float: right;
+}
+
+.sprint-pagination {
+	margin-top: 20px;
+}
+
+
+.shadow {
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.error {
+	background-color: #eabcbc;
+}
+
+.txt1 {
+	font-family: Raleway-SemiBold;
+	font-size: 13px;
+	color: #555555;
+	line-height: 1.4;
+	/* text-transform: uppercase; */
+  }
+
+  .txt2 {
+	font-family: Raleway-SemiBold;
+	font-size: 14px;
+	font-weight: 100;
+	color: #555555;
+	line-height: 1.4;
+	text-transform: uppercase;
+  }
+
+  .txt3 {
+	font-family: Raleway-SemiBold;
+	font-size: 15px;
+	font-weight:700;
+	color: #555555;
+	line-height: 1.4;
+	/* text-transform: uppercase; */
+  }
+
+  .txt4 {
+	font-family: Raleway-SemiBold;
+	font-size: 27px;
+	font-weight:700;
+	color: #555555;
+	line-height: 1.4;
+	/* text-transform: uppercase; */
+  }
