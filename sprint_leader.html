@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3.1.2.Sprint閲覧（Leader）</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>>
+
+        <!-- datepicker 전용 -->
+        <link href="css/sprint/jquery-ui.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- 메인 화면 전용 css -->
+        <link href="css/main/main.css" rel="stylesheet" type="text/css" />
+        <!-- !! -->
+
+        <!-- 스프린트 화면 전용 css -->
+        <link rel="stylesheet" type="text/css" href="css/login/util.css">
+        <link rel="stylesheet" type="text/css" href="css/sprint/sprint.css">
+        <!-- !! -->
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><a href="main.html"><img class="logo" src="images/Rgroup_logo_2.png"/></a></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn_is_using">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <li class="nav-item"><!--signup-->
+                            <button type="button" class="btn" onclick="location.href='mypage.html'">Mypage</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='main.html'">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <section class="main-content">
+                <div class="setting-container p-5 ml-5 mr-5">
+                        <h3 class="txt4 text-left username-place">Panda [法人]</h3>
+                    
+                        <div class="sprint_btn mb-2">
+                            <div class="team_btn txt3 mr-3">
+                                <a class="mr-2" href="#">法人</a>
+                                <a class="mr-2" href="#">個人</a>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm" onclick="location.href='createSprint.html'">Sprint登録</button>
+                            <button type="button" class="btn btn-primary btn-sm">CSV変換</button>
+                    </div>
+                        
+                    <!-- 필터링박스 -->
+                    <div class="filtering-card rounded-lg shadow p-xl-1 mb-4 overflow-hidden">
+                        <!-- 스프린트 기간 필터링 -->
+                        <div class="filtering">
+                            <span class="txt3 text-left">Sprint期間 </span>
+                            <div class="form-check form-check-inline ml-5 txt1">
+                                <input class="form-check-input" type="radio" name="period" id="asc" value="asc">
+                                <label class="form-check-label" for="asc">昇順</label>
+                            </div>
+                            <div class="form-check form-check-inline txt1">
+                                <input class="form-check-input" type="radio" name="period" id="desc" value="desc">
+                                <label class="form-check-label" for="desc">降順</label>
+                            </div>
+                            <!-- datepicker -->
+                            <div>
+                                <input type="text" class="txt1" id="datepicker_start" readonly="readonly">
+                                <input type="text" class="txt1" id="datepicker_end" readonly="readonly">
+                            </div>
+                        </div>
+                        <!-- 조직 필터링 -->
+                        <!-- <div class="filtering">
+                            <div class="txt3 text-left">部署</div>
+                            <span class="custom-checkbox m-l-20">
+                                <input type="checkbox" class="custom-control-input" id="selectAll" name="team_id" value="selectAll" onclick='selectAll(this)'>
+                                <label class="custom-control-label txt1" for="selectAll"><b>全体</b></label>
+                            </span>
+
+                            <span class="custom-checkbox m-l-40">
+                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
+                                <label class="custom-control-label txt1" for="1">法人</label>
+                            </span>
+    
+                            <span class="custom-checkbox m-l-40">
+                                <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
+                                <label class="custom-control-label txt1" for="2">個人</label>
+                            </span>
+    
+                            <span class="custom-checkbox m-l-40">
+                                <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
+                                <label class="custom-control-label txt1" for="3">コア</label>
+                            </span>
+                        </div> -->
+
+                        <div class="filtering float-right">
+                            <button id="filtering_search" type="button" class="btn filtering-btn txt1" onclick="location.href='#'"><b class="filtering-btn-font">filtering</b></button>
+                        </div>
+                    </div>
+
+                    <!-- 스프린트 리스트 -->
+                    <table class="table role-setting-table">
+                        <thead class="txt1">
+                          <tr>
+                            <th scope="col">Sprint名</th>
+                            <th scope="col">開始日</th>
+                            <th scope="col">終了日</th>
+                            <th scope="col">Story Point</th>
+                            <th scope="col">見積もり時間</th>
+                            <th scope="col">実積時間</th>
+                            <th scope="col">稼働時間</th>
+                            <th scope="col">営業日</th>
+                            <th scope="col">チケット数</th>
+                            <th scope="col">管理</th>
+                          </tr>
+                        </thead>
+                        <tbody class="txt1">
+                            <tr>
+                                <td>
+                                    <a href="#">GG-project</a>
+                                </td>
+                                <td>2020-11-10</td>
+                                <td>2020-12-10</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>31</td>
+                                <td>54</td>
+                                <td>55</td>
+                                <td>24</td>
+                                <td>
+                                    <div>
+                                        <a href="editSprint.html">修正</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal">削除</a>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              
+                            <tr>
+                                <td>
+                                    <a href="#">GG-project</a>
+                                </td>
+                                <td>2020-11-10</td>
+                                <td>2020-12-10</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>31</td>
+                                <td>54</td>
+                                <td>55</td>
+                                <td>24</td>
+                                <td>
+                                    <div>
+                                        <a href="editSprint.html">修正</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal">削除</a>
+                                    </div>
+                                </td>
+                              </tr>
+
+                              
+                            <tr>
+                                <td>
+                                    <a href="#">GG-project</a>
+                                </td>
+                                <td>2020-11-10</td>
+                                <td>2020-12-10</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>31</td>
+                                <td>54</td>
+                                <td>55</td>
+                                <td>24</td>
+                                <td>
+                                    <div>
+                                        <a href="editSprint.html">修正</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal">削除</a>
+                                    </div>
+                                </td>
+                              </tr>
+                              
+                            <tr>
+                                <td>
+                                    <a href="#">GG-project</a>
+                                </td>
+                                <td>2020-11-10</td>
+                                <td>2020-12-10</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>31</td>
+                                <td>54</td>
+                                <td>55</td>
+                                <td>24</td>
+                                <td>
+                                    <div>
+                                        <a href="editSprint.html">修正</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal">削除</a>
+                                    </div>
+                                </td>
+                              </tr>
+                              
+                            <tr>
+                                <td>
+                                    <a href="#">GG-project</a>
+                                </td>
+                                <td>2020-11-10</td>
+                                <td>2020-12-10</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td>31</td>
+                                <td>54</td>
+                                <td>55</td>
+                                <td>24</td>
+                                <td>
+                                    <div>
+                                        <a href="editSprint.html">修正</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal">削除</a>
+                                    </div>
+                                </td>
+                              </tr>
+                              
+                        </tbody>
+                      </table>
+
+                      <div class="sprint-pagination">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1"><</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">></a>
+                            </li>
+                            </ul>
+                        </nav>
+                      </div>
+
+                    <!-- 삭제 Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">削除</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                [sprint名] を削除します。
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">いいえ</button>
+                            <button type="button" class="btn btn-primary" onclick="location.href='sprint_leader.html'">確認</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </section>
+            <!-- content end -->
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+        <!-- 유저권한설정 전용 js -->
+        <script src="js/sprint/sprint.js"></script>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3.3. Sprint修正ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>>
+
+        <!-- datepicker 전용 -->
+        <link href="css/sprint/jquery-ui.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- 메인 화면 전용 css -->
+        <link href="css/main/main.css" rel="stylesheet" type="text/css" />
+        <!-- !! -->
+
+        <!-- 스프린트 화면 전용 css -->
+        <link rel="stylesheet" type="text/css" href="css/login/util.css">
+        <link rel="stylesheet" type="text/css" href="css/sprint/createSprint.css">
+        <!-- !! -->
+    </head>
+
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><a href="main.html"><img class="logo" src="images/Rgroup_logo_2.png"/></a></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <!-- User-Management는 manager만 볼 수 있기 때문에 로그아웃상태에선 x -->
+                            <button type="button" class="btn" onclick="location.href='roleSetting.html'">User-Management</button>
+                        </li>
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn_is_using">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item">
+                            <button type="button" class="btn" onclick="location.href='team.html'">Team</button>
+                        </li>
+                        <li class="nav-item"><!--signup-->
+                            <button type="button" class="btn" onclick="location.href='mypage.html'">Mypage</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='main.html'">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <section class="main-content pl-5 pr-5 ml-5 mr-5">
+                <div class="p-5 ml-5 mr-5">
+                        <h3 class="txt4 text-left">Sprint修正</h3>
+                        <p class="txt1">Sprintを修正してください!</p>
+                        
+                        <div class="shadow-lg p-5 bg-white rounded">
+                            <!-- 에러메세지표시부분 -->
+                            <div class="error m-b-25 rounded-lg text-center"><small>error message</small></div>
+                             <!-- 조직 필터링 -->
+                            <div class="filtering text-center">
+                                <span class="custom-checkbox m-l-20">
+                                    <input type="checkbox" class="custom-control-input" id="selectAll" name="team_id" value="selectAll" onclick='selectAll(this)'>
+                                    <label class="custom-control-label txt1" for="selectAll"><b>全体</b></label>
+                                </span>
+
+                                <span class="custom-checkbox m-l-40">
+                                    <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
+                                    <label class="custom-control-label txt1" for="1">法人</label>
+                                </span>
+        
+                                <span class="custom-checkbox m-l-40">
+                                    <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
+                                    <label class="custom-control-label txt1" for="2">個人</label>
+                                </span>
+        
+                                <span class="custom-checkbox m-l-40">
+                                    <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3" checked>
+                                    <label class="custom-control-label txt1" for="3">コア</label>
+                                </span>
+                            </div>
+                            <!-- input 태그 -->
+                            <form action="">
+                                <div class="sprint-input">
+                                    <div class="row">
+                                        <label for="sprint_name" class="col-sm-3 col-form-label txt3 text-center">Sprint名</label>
+                                        <div class="col-sm-9">
+                                          <input type="text" class="form-control" id="sprint_name" name="sprint_name" value="GG-Project">
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <label for="sprint_name" class="col-sm-3 col-form-label txt3 text-center">開始日</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control txt1" id="datepicker_start" name="start_date" readonly="readonly">
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <label for="sprint_name" class="col-sm-3 col-form-label txt3 text-center">終了日
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control txt1" id="datepicker_end" name="end_date" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- done 버튼 -->
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <a class="btn btn-primary" data-toggle="modal" data-target="#sprint_edit" href="#">完了</a>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="sprint_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">確認メッセージ</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                        Sprintを登録しました。
+                                        </div>
+                                        <div class="modal-footer">
+                                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal"></button> -->
+                                        <button type="button" class="btn btn-primary" onclick="location.href='sprint_manager.html'">確認</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+            <!-- content end -->
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">Rakuten mobile energy<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+        <!-- 유저권한설정 전용 js -->
+        <script src="js/sprint/sprint.js"></script>
+    </body>
+</html>
