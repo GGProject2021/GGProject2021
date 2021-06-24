@@ -10,6 +10,10 @@
     padding-bottom:50px;
     box-shadow: 5px 5px 5px grey;
 }
+.sprint_name{
+    color:#3498db;
+    font-weight: bold;
+}
 .form_table{
     width:100%;
 }
@@ -83,7 +87,7 @@ th .form-control{
     text-align: center;
 }
 .support_div_2 ,.support_radio_2{
-    display: none;
+    display: '';
 }
 .support_div_3 , .support_radio_3{
     display: none;
