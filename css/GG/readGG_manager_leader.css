@@ -1,0 +1,110 @@
+.container{
+    margin-top:50px;
+    width: 80%;
+}
+.GG_container{
+    width:100%;
+    padding-left:80px;
+    padding-right:80px;
+}
+.main_form{
+    width: 800px;
+    padding-top:50px;
+    padding-left:100px;
+    padding-right:100px;
+    padding-bottom:50px;
+    box-shadow: 5px 5px 5px grey;
+}
+.sprint_name{
+    color:#3498db;
+    font-weight: bold;
+}
+.sprint_info{
+    width:350px;
+    font-weight:lighter;
+}
+.form_table{
+    width:100%;
+}
+.form_table_th1{
+    width:220px;
+}
+.logo{
+    width:230px;
+}
+.head_count{
+    color:#2ecc71;
+    font-weight:bold;
+}
+.GGpage_list{
+    font-weight: bold;
+    margin-top: 50px;
+}
+#inline_block_left{
+    display:inline-block;
+    width:350px;
+}
+.inline_block_left{
+    display:inline-block;
+}
+#inline_block_right{
+    display:inline-block;
+    margin-left:10px;
+}
+.inline_block_right{
+    display:inline-block;
+    margin-left:10px;
+}
+.form-control{
+    height:34px;
+    padding-top:2px;
+}
+
+.main_left{
+    margin-top:0px;
+    padding-top:0px;
+    display:inline-block;
+    margin-left:100px;
+    margin-right:50px;
+}
+.errorMsg{
+    background-color: #eabcbc;
+    width:100%;
+    text-align:left;
+    margin-left:00px;
+    padding-left:20px;
+    padding-top:5px;
+    padding-bottom:2px;
+    padding-right:20px;
+    border-radius:10px 10px 10px 10px;
+}
+.radio_sort{
+    margin-left:40px;
+}
+.main_right{
+    display:inline-block;
+}
+.sidebar{
+    display:flex;
+    justify-content:space-between;
+}
+.nav-item{
+    margin-left:20px;
+}
+#wide_button{
+    width:100px;
+}
+.center_div{
+    text-align: center;
+}
+.btn_is_using{
+    margin-top:7px;
+    background-color: blue;
+    color:white;
+    font-weight:bold;
+    border:0;
+    outline:0;
+
+}
+
+
