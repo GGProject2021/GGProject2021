@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.1.1.GG作成ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="css/GG/readGG_manager_leader.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/GG/readGG_manager_leader.js"></script>
+    </head>
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn_is_using">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item"><!--signup-->
+
+                            <button type="button" class="btn" onclick="location.href='signup.html'">Signup</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='login.html'">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <div class="GG_container" name="content" style="padding-top:30px">
+                <!--sprint 정보-->
+                <div class="inline_block_left">
+                    <H5 class="sprint_name">SPRINT名(20201011~20201014)</H5>
+                </div>
+                <form class="inline_block_right">
+                <div class="inline_block_right">
+                    <select class="form-control" id="sprint_name">
+                        <!--개발시 밸류값은 sprint의 id로 변경 될 것-->
+                        <option value="1">first sprint</option>
+                        <option value="2">second sprint</option>
+                        <option value="3">third sprint</option>
+                        <option value="4">forth sprint</option>
+                    </select>
+                </div>
+                <div class="inline_block_right">
+                    <button type="submit" class="btn btn-light">移動</button>
+                </div>
+                </form>
+                <table class="sprint_info">
+                    <tbody>
+                        <tr>
+                            <td>開始日</td>
+                            <td>2020-11-10</td>
+                        </tr>
+                        <tr>
+                            <td>終了日</td>
+                            <td>2020-11-20</td>
+                        </tr>
+                        <tr>
+                            <td>ヘッドカウント</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>営業日</td>
+                            <td>8</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-light">検索画面に戻る</button>
+                <button class="btn btn-light">sprint修正</button>
+                <!--GG관리--><br>
+                <div class="inline_block_left">
+                    <h5 class="GGpage_list">GG管理</h5>
+                </div>
+                <div class="inline_block_right">
+                    <h5 class="head_count">4</h5>
+                </div>
+                <br>
+                <div class="space_between">
+                    <div>
+                        <form>
+                            <p class="inline_block_right">会員名</p>
+                            <div class="inline_block_right">
+                                <select class="form-control" id="employee_name">
+                                    <!--개발시 밸류값은 사원의 id로 변경 될 것-->
+                                    <option value="1">panda1</option>
+                                    <option value="2">panda2</option>
+                                    <option value="3">panda3</option>
+                                    <option value="4">panda4/option>
+                                </select>
+                            </div>
+                            <div class="inline_block_right">
+                                <button type="submit" class="btn btn-light">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <button class="btn btn-success" onclick="location.href='#GGanalysis'">GG分析↓</button>
+                        <button class="btn btn-primary">GG登↓</button>
+                    </div>
+                </div>
+                <h5 class="GGpage_list">コメント</h5>
+                <h5 class="GGpage_list" id="GGanalysis">GG分析</h5>
+                <table class="GG_table">
+                    <thead>
+                        <tr class="GG_table_tr">
+                            <td class="GG_table_td">名前</td>
+                            <td class="GG_table_td">story point</td>
+                            <td class="GG_table_td">見積もり時間</td>
+                            <td class="GG_table_td">実績時間</td>
+                            <td class="GG_table_td">稼働時間</td>
+                            <td class="GG_table_td">営業日</td>
+                            <td class="GG_table_td">チケット数 サポート時間</td>
+                            <td class="GG_table_td">actual time</td>
+                            <td class="GG_table_td">working hours</td>
+                            <td class="GG_table_td">business days</td>
+                            <td class="GG_table_td">管理</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda1</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda2</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda3</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda4</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div><!--end of main-->
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">© Rakuten Group, Inc.<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+    </body>
+</html>

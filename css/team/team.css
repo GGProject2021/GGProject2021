@@ -26,6 +26,9 @@
     margin-left:100px;
     margin-right:50px;
 }
+.head_count{
+    color:#2ecc71;
+}
 .main_right{
     display:inline-block;
 }
