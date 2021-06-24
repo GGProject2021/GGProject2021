@@ -27,7 +27,7 @@
                             <button type="button" class="btn">Sprint</button>
                         </li>
                         <li class="nav-item"><!--GG-->
-                            <button type="button" class="btn">GG</button>
+                            <button type="button" class="btn_is_using">GG</button>
                         </li>
                         <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
                         <li class="nav-item"><!--signup-->
@@ -81,7 +81,7 @@
                                 </tr>   
                                 <!--타부서 서포트 시간 --> 
                                 <!--두번까지만 추가 가능하다. 부서가 변경될 경우 이부분도 바로 변경될 수 있도록 실제 개발시 for사용할것-->
-                                <!--input 세개 전부 require =x 로 해놓는다. 다만, 1은 작성하지 않고 2나 3을 작성하여 제출할 시 작성이 되지 않는다.alert 출력-->
+                                <!--input 세개 전부 require =x 로 해놓는다. alert 출력-->
                                 <tr>
                                     <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
                                     <th><input type="text" class="form-control" name="support_time"></th>
@@ -90,7 +90,7 @@
                                     <th class="form_table_th1"></th>
                                     <th>
                                         <input type="radio" name="suppot_section" value="consumer_section">個人
-                                        <input type="radio" class="radio_sort" name="suppot_section" value="coporate_section">法人
+                                        <input type="radio" class="radio_sort" name="suppot_section" value="coporate_section" disabled>法人
                                         <input type="radio" class="radio_sort" name="suppot_section" value="core_section">コア
                                     </th>
                                 </tr> 
@@ -106,7 +106,7 @@
                                         <th class="form_table_th1"></th>
                                         <th>
                                             <input type="radio" name="suppot_section_2" value="consumer_section">個人
-                                            <input type="radio" class="radio_sort" name="suppot_section_2" value="coporate_section">法人
+                                            <input type="radio" class="radio_sort" name="suppot_section_2" value="coporate_section" disabled>法人
                                             <input type="radio" class="radio_sort" name="suppot_section_2" value="core_section">コア
                                         </th>
                                     </tr> 
@@ -124,7 +124,7 @@
                                         <th class="form_table_th1"></th>
                                         <th>
                                             <input type="radio" name="suppot_section_3" value="consumer_section">個人
-                                            <input type="radio" class="radio_sort" name="suppot_section_3" value="coporate_section">法人
+                                            <input type="radio" class="radio_sort" name="suppot_section_3" value="coporate_section" disabled>法人
                                             <input type="radio" class="radio_sort" name="suppot_section_3" value="core_section">コア
                                         </th>
                                     </tr>
