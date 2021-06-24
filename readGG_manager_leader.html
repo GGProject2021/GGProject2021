@@ -63,34 +63,143 @@
                 <table class="sprint_info">
                     <tbody>
                         <tr>
-                            <th>開始日</th>
-                            <th>2020-11-10</th>
+                            <td>開始日</td>
+                            <td>2020-11-10</td>
                         </tr>
                         <tr>
-                            <th>終了日</th>
-                            <th>2020-11-20</th>
+                            <td>終了日</td>
+                            <td>2020-11-20</td>
                         </tr>
                         <tr>
-                            <th>ヘッドカウント</th>
-                            <th>4</th>
+                            <td>ヘッドカウント</td>
+                            <td>4</td>
                         </tr>
                         <tr>
-                            <th>営業日</th>
-                            <th>8</th>
+                            <td>営業日</td>
+                            <td>8</td>
                         </tr>
                     </tbody>
                 </table>
                 <button class="btn btn-light">検索画面に戻る</button>
                 <button class="btn btn-light">sprint修正</button>
-                <!--GG관리-->
+                <!--GG관리--><br>
                 <div class="inline_block_left">
                     <h5 class="GGpage_list">GG管理</h5>
                 </div>
                 <div class="inline_block_right">
                     <h5 class="head_count">4</h5>
                 </div>
+                <br>
+                <div class="space_between">
+                    <div>
+                        <form>
+                            <p class="inline_block_right">会員名</p>
+                            <div class="inline_block_right">
+                                <select class="form-control" id="employee_name">
+                                    <!--개발시 밸류값은 사원의 id로 변경 될 것-->
+                                    <option value="1">panda1</option>
+                                    <option value="2">panda2</option>
+                                    <option value="3">panda3</option>
+                                    <option value="4">panda4/option>
+                                </select>
+                            </div>
+                            <div class="inline_block_right">
+                                <button type="submit" class="btn btn-light">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <button class="btn btn-success" onclick="location.href='#GGanalysis'">GG分析↓</button>
+                        <button class="btn btn-primary">GG登↓</button>
+                    </div>
+                </div>
+                <h5 class="GGpage_list">コメント</h5>
+                <h5 class="GGpage_list" id="GGanalysis">GG分析</h5>
+                <table class="GG_table">
+                    <thead>
+                        <tr class="GG_table_tr">
+                            <td class="GG_table_td">名前</td>
+                            <td class="GG_table_td">story point</td>
+                            <td class="GG_table_td">見積もり時間</td>
+                            <td class="GG_table_td">実績時間</td>
+                            <td class="GG_table_td">稼働時間</td>
+                            <td class="GG_table_td">営業日</td>
+                            <td class="GG_table_td">チケット数 サポート時間</td>
+                            <td class="GG_table_td">actual time</td>
+                            <td class="GG_table_td">working hours</td>
+                            <td class="GG_table_td">business days</td>
+                            <td class="GG_table_td">管理</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda1</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda2</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda3</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda4</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            </div>
+            </div><!--end of main-->
         </div>
         <footer>
             <p name="footer" style="margin-top:100px;text-align:center">© Rakuten Group, Inc.<br>Minyeong Kim, Eunchae Kim</p>

@@ -3,7 +3,7 @@
     width: 80%;
 }
 .GG_container{
-    width:100%;
+    width:1150px;
     padding-left:80px;
     padding-right:80px;
 }
@@ -15,13 +15,13 @@
     padding-bottom:50px;
     box-shadow: 5px 5px 5px grey;
 }
+
 .sprint_name{
     color:#3498db;
     font-weight: bold;
 }
 .sprint_info{
     width:350px;
-    font-weight:lighter;
 }
 .form_table{
     width:100%;
@@ -36,9 +36,29 @@
     color:#2ecc71;
     font-weight:bold;
 }
+.space_between{
+    display: flex;
+    justify-content: space-between;
+}
 .GGpage_list{
     font-weight: bold;
     margin-top: 50px;
+}
+.GG_table{
+    width:100%;
+    text-align: center;
+    font-size:13.5px;
+}
+.GG_table_tr{
+    border-bottom: 1px solid grey;
+}
+.GG_info{
+    background-color: #d4f4a6;
+    border-bottom: 1px solid grey;
+}
+.GG{
+    background-color:#ffe79e;
+    border-bottom: 1px solid grey;
 }
 #inline_block_left{
     display:inline-block;
