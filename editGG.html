@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.2.GG作成ページ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="css/GG/createGG.css" rel="stylesheet" type="text/css" />
+
+        <script src="js/GG/createGG.js"></script>
+    </head>
+    <body>
+        <!--main-->
+        <div class ="container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div name="logo" >
+                    <p><img class="logo" src="images/Rgroup_logo_2.png"/></p>
+                </div>
+                <div name="sidebar">
+                    <ul class="nav justify-content-right">
+                        <li class="nav-item"><!--sprint-->
+                            <button type="button" class="btn">Sprint</button>
+                        </li>
+                        <li class="nav-item"><!--GG-->
+                            <button type="button" class="btn">GG</button>
+                        </li>
+                        <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
+                        <li class="nav-item"><!--signup-->
+
+                            <button type="button" class="btn" onclick="location.href='signup.html'">Signup</button>
+                        </li>
+                        <li class="nav-item"><!--login button-->
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='login.html'">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--content started-->
+            <div class="container clearfix" name="content" style="padding-top:30px">
+                <H2>GG登録</H2>
+                <p>新しいGGを作成してください!</p>
+                <div class="main_form">
+                    <div class="errorMsg">
+                        <p>I'm errorMSG</p>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <form>
+                            <table class="form_table">
+                                <thead>
+                                <tr>
+                                    <th class="form_table_th1"><label for="storypoint">story point</label></th>
+                                    <th><input type="text" class="form-control" name="storypoint"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th class="form_table_th1"><label for="mitsumori_time"><b>見積もり時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="mitsumori_time"></th>
+                                </tr>
+                                <tr>
+                                    <th class="form_table_th1"><label for="actual_time"><b>実績時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="actual_time"></th>
+                                </tr>
+                                <tr>
+                                    <th class="form_table_th1"><label for="working_hours"><b>稼働時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="working_hours"></th>
+                                </tr>   
+                                <tr>
+                                    <th class="form_table_th1"><label for="business_days"><b>営業日</b></label></th>
+                                    <th><input type="text" class="form-control" name="business_days"></th>
+                                </tr>   
+                                <tr>
+                                    <th class="form_table_th1"><label for="count_ticket"><b>チケット数</b></label></th>
+                                    <th><input type="text" class="form-control" name="count_ticket"></th>
+                                </tr>   
+                                <!--타부서 서포트 시간 --> 
+                                <!--두번까지만 추가 가능하다. 부서가 변경될 경우 이부분도 바로 변경될 수 있도록 실제 개발시 for사용할것-->
+                                <!--input 세개 전부 require =x 로 해놓는다. 다만, 1은 작성하지 않고 2나 3을 작성하여 제출할 시 작성이 되지 않는다.alert 출력-->
+                                <tr>
+                                    <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
+                                    <th><input type="text" class="form-control" name="support_time"></th>
+                                </tr>
+                                <tr>
+                                    <th class="form_table_th1"></th>
+                                    <th>
+                                        <input type="radio" name="suppot_section" value="consumer_section">個人
+                                        <input type="radio" class="radio_sort" name="suppot_section" value="coporate_section">法人
+                                        <input type="radio" class="radio_sort" name="suppot_section" value="core_section">コア
+                                    </th>
+                                </tr> 
+                                <div>
+                                    <tr class="support_div_2">
+                                        <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
+                                        <th>
+                                            <input type="text" class="form-control" id="inline_block_left" name="support_time_2">
+                                            <span id="close_support_form_2" class="close_support_form_2"><a href="#">x</a></span>
+                                        </th>
+                                    </tr>
+                                    <tr class="support_radio_2">
+                                        <th class="form_table_th1"></th>
+                                        <th>
+                                            <input type="radio" name="suppot_section_2" value="consumer_section">個人
+                                            <input type="radio" class="radio_sort" name="suppot_section_2" value="coporate_section">法人
+                                            <input type="radio" class="radio_sort" name="suppot_section_2" value="core_section">コア
+                                        </th>
+                                    </tr> 
+                                </div>
+                                <!--두번째 추가 부서-->
+
+                                    <tr class="support_div_3">
+                                        <th class="form_table_th1"><label for="support_time"><b>自分の他部署サポート時間</b></label></th>
+                                        <th>
+                                            <input type="text" class="form-control" id="inline_block_left" name="support_time_3">
+                                            <span id="close_support_form_3" class="close_support_form_3"><a href="#">x</a></span>
+                                        </th>
+                                    </tr>
+                                    <tr class="support_radio_3">
+                                        <th class="form_table_th1"></th>
+                                        <th>
+                                            <input type="radio" name="suppot_section_3" value="consumer_section">個人
+                                            <input type="radio" class="radio_sort" name="suppot_section_3" value="coporate_section">法人
+                                            <input type="radio" class="radio_sort" name="suppot_section_3" value="core_section">コア
+                                        </th>
+                                    </tr>
+                   
+                                </tbody>
+                            </table>
+                            <div class="check_support_time">
+                                <p>他部署をサポートしましたか？</p>
+                                <span id="check_support_time"><a href="#"><img src="images/plus.png"/>他部署サポート時間追加</a></span>
+                            </div>
+                            <div class="done">
+                                <input type="image" src="images/check.png" alt="done">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p name="footer" style="margin-top:100px;text-align:center">© Rakuten Group, Inc.<br>Minyeong Kim, Eunchae Kim</p>
+        </footer> 
+    </body>
+</html>
