@@ -228,6 +228,7 @@
                     </div>
                     <div class="inline_block_right">
                         <!--첫번째 선택한 날 부터 3개월씩만 볼 수 있도록 -->
+                        <!--기간 설정시 값을 세션에 저장해야한다. 분석이나 다른 action시에도 유지될 수 있도록-->
                         <form>
                             <div class="inline_block_left"><input type="date" class="form-control" id="first_date"  name="first_date"> </div>
                             <div class="inline_block_right"><p> ~ </p></div>
@@ -236,8 +237,32 @@
                     </div>   
                 </div>
                 <p class= "align_right">最初の日付から 3ヶ月まで検索可能。</p>
-                
-
+                <div class="GGanalysis_list_div">
+                    <h5 class="GGanalysis_list">各チーム員の成長率比較(actual time)</h5>
+                    <form>
+                        <div class="inline_block_left">
+                            <select class="form-control" id="employee_name_1">
+                                <!--개발시 밸류값은 사원의 id로 변경 될 것-->
+                                <option value="1" selected>panda1</option>
+                                <option value="2">panda2</option>
+                                <option value="3">panda3</option>
+                                <option value="4">panda4</option>
+                            </select>
+                        </div>
+                        <div class="inline_block_right">
+                            <select class="form-control" id="employee_name_2">
+                                <!--개발시 밸류값은 사원의 id로 변경 될 것-->
+                                <option value="1">panda1</option>
+                                <option value="2">panda2</option>
+                                <option value="3" selected>panda3</option>
+                                <option value="4">panda4</option>
+                         </select>
+                        </div>
+                        <div class="inline_block_right">
+                            <button type="submit" class="btn btn-primary">設定</button>
+                        </div>
+                    </form>
+                </div>
             </div><!--end of main-->
         </div>
         <footer>

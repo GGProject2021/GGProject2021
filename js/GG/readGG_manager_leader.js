@@ -8,14 +8,14 @@ window.onload = function() {
         if(firstDate == ''){
             alert("最初の日付から選択してください。");
         }else{
-            tempDate = getFormatDate(tempDate,3);
+            tempDate = changeMonth(tempDate,3);
             secondDate.setAttribute("min", firstDate); 
             secondDate.setAttribute("max", tempDate);
             
         }
     }
     
-    function getFormatDate(date, num){
+    function changeMonth(date, num){
         date = ""+date;
         var yyyy = parseInt(date.substr(0, 4), 10);
 	    var mm = parseInt(date.substr(5, 2), 10);
