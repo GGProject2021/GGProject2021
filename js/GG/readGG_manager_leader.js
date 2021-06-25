@@ -34,6 +34,7 @@ window.onload = function() {
     document.getElementById('second_date').addEventListener('click',limitDate);
     
     //chart js
+    //내용 바꿔야함 
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
