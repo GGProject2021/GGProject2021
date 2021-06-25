@@ -10,8 +10,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link href="css/GG/readGG_manager_leader.css" rel="stylesheet" type="text/css" />
-
-        <script src="js/GG/readGG_manager_leader.js"></script>
     </head>
     <body>
         <!--main-->
@@ -100,7 +98,7 @@
                                     <option value="1">panda1</option>
                                     <option value="2">panda2</option>
                                     <option value="3">panda3</option>
-                                    <option value="4">panda4/option>
+                                    <option value="4">panda4</option>
                                 </select>
                             </div>
                             <div class="inline_block_right">
@@ -114,8 +112,130 @@
                     </div>
                     
                 </div>
+                <table class="GG_table">
+                    <thead>
+                        <tr class="GG_table_tr">
+                            <td class="GG_table_td">名前</td>
+                            <td class="GG_table_td">story point</td>
+                            <td class="GG_table_td">見積もり時間</td>
+                            <td class="GG_table_td">実績時間</td>
+                            <td class="GG_table_td">稼働時間</td>
+                            <td class="GG_table_td">営業日</td>
+                            <td class="GG_table_td">チケット数 サポート時間</td>
+                            <td class="GG_table_td">actual time</td>
+                            <td class="GG_table_td">working hours</td>
+                            <td class="GG_table_td">business days</td>
+                            <td class="GG_table_td">管理</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda1</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda2</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda3</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                        <tr class="GG_table_tr">
+                            <td class="GG_info">panda4</td>
+                            <td class="GG_info">1</td>
+                            <td class="GG_info">2</td>
+                            <td class="GG_info">3</td>
+                            <td class="GG_info">4</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG_info">5</td>
+                            <td class="GG">6</td>
+                            <td class="GG">7</td>
+                            <td class="GG">8</td>
+                            <td class="GG_table_td">
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--코멘트-->
                 <h5 class="GGpage_list">コメント</h5>
+                <table class="GGpage_coment">
+                    <tbody class="GGpage_coment">
+                        <tr>
+                            <th>リーダーA   チーム内外のコードレビューが多い   2020/12/21</th>
+                        </tr>
+                        <tr>
+                            <th>マネージャーB   非資産化プロジェクトも加算   2020/12/25</th>
+                        </tr>
+                        <tr>
+                            <th> マネージャーA  確認。   2020/12/26 
+                                <a href="">修正</a>
+                                <a href="">削除</a>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <form class="coment">
+                    <div class="inline_block_left">
+                        <input type="text" class="form-control" name="coment" placeholder="コメントを書いてください">
+                    </div>
+                    <div class="inline_block_right">
+                        <button type="submit" class="btn btn-light">登録</button>
+                    </div>
+                </form>
                 <h5 class="GGpage_list" id="GGanalysis">GG分析</h5>
+                <div class="space_between">
+                    <div class="inline_block_left">
+                        <p>法人チームのGGチャート</p>
+                    </div>
+                    <div class="inline_block_right">
+                        <!--첫번째 선택한 날 부터 3개월씩만 볼 수 있도록 -->
+                        <form>
+                            <div class="inline_block_left"><input type="date" class="form-control" id="first_date"  name="first_date"> </div>
+                            <div class="inline_block_right"><p> ~ </p></div>
+                            <div class="inline_block_right"><input type="date" class="form-control" id="second_date" name="second_date"></div>
+                        </form>
+                    </div>   
+                </div>
+                <p class= "align_right">最初の日付から 3ヶ月まで検索可能。</p>
                 
 
             </div><!--end of main-->
@@ -123,5 +243,8 @@
         <footer>
             <p name="footer" style="margin-top:100px;text-align:center">© Rakuten Group, Inc.<br>Minyeong Kim, Eunchae Kim</p>
         </footer> 
+    
+        <script src="js/GG/readGG_manager_leader.js"></script>
     </body>
+    
 </html>

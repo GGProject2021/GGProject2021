@@ -51,6 +51,7 @@
 }
 .GG_table_tr{
     border-bottom: 1px solid grey;
+    height: 30px;
 }
 .GG_info{
     background-color: #d4f4a6;
@@ -59,6 +60,9 @@
 .GG{
     background-color:#ffe79e;
     border-bottom: 1px solid grey;
+}
+.align_right{
+    text-align: right;
 }
 #inline_block_left{
     display:inline-block;
@@ -79,7 +83,21 @@
     height:34px;
     padding-top:2px;
 }
-
+.coment .form-control{
+    width:900px;
+    height: 70px;
+    margin-top:20px;
+}
+.coment button{
+    height: 70px;
+}
+.GGpage_coment{
+    width:100%;
+}
+.GGpage_coment th{
+    height: 40px;
+    border-bottom: 1px solid grey;
+}
 .main_left{
     margin-top:0px;
     padding-top:0px;
