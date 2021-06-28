@@ -54,24 +54,48 @@
                         <div class="profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden">
                             <h5 class="text-left">ユーザー情報変更</h5>
                             <br>
-                            <p class="text-center txt3 mt-1">Panda</p>
-                            <p class="text-center txt1 mt-1">Panda@rakuten.com</p>
+                            <!-- <p class="text-center txt3 mt-1">Panda</p> -->
                             <div class="content-card card mb-2 rounded-lg">
                                 <!-- <validation-errors :errors="validationErrors" v-if="validationErrors"></validation-errors> -->
                                 <!-- 에러 메시지 표시 부분 -->
                                 <div class="error m-2 rounded-lg"><small>error message</small></div>
                                 <div class="card-body txt1">
                                     <div class="row">
-                                        <div class="col-sm-5">
+                                        <div class="col-sm-12">
+                                            <div class="mb-2 txt2 text-left">E-mail</div>
+                                            <input type="email" class="form-control txt1" name="e-mail" value="panda@rakuten.com">
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-6">
                                             <div class="mb-2 txt2 text-left">氏名</div>
-                                            <input type="text" class="form-control txt1" name="username" value="パンダ">
+                                            <input type="text" class="form-control txt1" name="first_name" value="田中">
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="mb-2 txt2 text-left">-</div>
+                                            <input type="text" class="form-control txt1" name="last_name" value="パンダ">
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="mb-2 txt2 text-left">社員番後</div>
+                                            <input type="text" class="form-control txt1" name="employee_num" value="0512342">
                                         </div>
 
                                         <div class="col-sm-7">
                                             <div class="mb-2 txt2 text-left">所属組織 / ROLE</div>
 
                                             <div class="custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1" checked>
+                                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1" checked disabled>
                                                 <label class="custom-control-label txt1" for="1">法人
                                                     <select name="hou_role" class="txt1 m-l-50" disabled>
                                                         <option value="manager">Manager</option>
@@ -83,7 +107,7 @@
                                             </div>
             
                                             <div class="custom-checkbox m-d-1">
-                                                <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
+                                                <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2" disabled>
                                                 <label class="custom-control-label txt1" for="2">個人
                                                     <select name="ko_role" class="txt1 m-l-50" disabled>
                                                         <option value="manager">Manager</option>
@@ -95,7 +119,7 @@
                                             </div>
             
                                             <div class="custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
+                                                <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3" disabled>
                                                 <label class="custom-control-label txt1" for="3">コア
                                                     <select name="core_role" class="txt1 m-l-50" disabled>
                                                         <option value="manager">Manager</option>
@@ -108,6 +132,7 @@
                                         </div>
                                     </div>
                                     <hr>
+                                    
 
                                     <div class="row">
                                         <div class="col-sm-12">
@@ -120,7 +145,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="mb-2 txt2 text-left">Password check</div>
-                                            <input type="password" class="form-control" name="password_check" value="*********">
+                                            <input type="password" class="form-control" name="password_check" value="*********" onpaste="javascript:return false;">
                                         </div>
                                     </div>
 

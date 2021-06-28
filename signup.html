@@ -60,82 +60,94 @@
                                 <!-- 에러 메시지 표시 부분 -->
                                 <div class="error m-b-25 rounded-lg text-center"><small>error message</small></div>
 
-                                <span class="txt1 p-b-11">
+                                <!-- <span class="txt1 p-b-11">
                                     User Id
                                 </span>
                                 <div class="wrap-input100 m-b-12">
                                     <input class="input100" type="text" name="userid" >
                                     <span class="focus-input100"></span>
+                                </div> -->
+
+                                <div class="col-sm-6 p-l-0">
+                                    <span class="txt1 p-b-11">
+                                        氏名
+                                    </span>
+                                    <div class="wrap-input100 m-b-12">
+                                        <input class="input100 txt1" type="text" name="employee_num" placeholder="First name">
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
-                                <span class="txt1 p-b-11">
-                                    氏名
-                                </span>
-                                <div class="wrap-input100 m-b-12">
-                                    <input class="input100" type="text" name="username" >
-                                    <span class="focus-input100"></span>
+                                <div class="col-sm-6 p-r-0">
+                                    <span class="txt1 p-b-11">
+                                        -
+                                    </span>
+                                    <div class="wrap-input100 m-b-12">
+                                        <input class="input100 txt1" type="text" name="employee_num" placeholder="Last name">
+                                        <span class="focus-input100"></span>
+                                    </div>
                                 </div>
 
-                                    <div class="col-sm-5 p-l-0">
-                                        <span class="txt1 p-b-11">
-                                            EMPLOYEE NUMBER
-                                        </span>
-                                        <div class="wrap-input100 m-b-12">
-                                            <input class="input100" type="text" name="employee_num" >
-                                            <span class="focus-input100"></span>
+
+                                <div class="col-sm-5 p-l-0">
+                                    <span class="txt1 p-b-11">
+                                        EMPLOYEE NUMBER
+                                    </span>
+                                    <div class="wrap-input100 m-b-12">
+                                        <input class="input100" type="text" name="employee_num" >
+                                        <span class="focus-input100"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-7">
+                                    <span class="txt1 p-b-11">
+                                        所属組織 / ROLE
+                                    </span>
+                                    <div class="p-l-25">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
+                                            <label class="custom-control-label txt2" for="1">法人
+                                                <select name="hou_role" class="txt2 m-l-50" disabled>
+                                                    <option value="manager">Manager</option>
+                                                    <option value="leader">Leader</option>
+                                                    <option value="member" selected>Member</option>
+                                                    <option value="none">なし</option>
+                                                </select>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-checkbox m-d-1">
+                                            <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
+                                            <label class="custom-control-label txt2" for="2">個人
+                                                <select name="ko_role" class="txt2 m-l-50" disabled>
+                                                    <option value="manager">Manager</option>
+                                                    <option value="leader">Leader</option>
+                                                    <option value="member" selected>Member</option>
+                                                    <option value="none">なし</option>
+                                                </select>
+                                            </label>
+                                        </div>
+        
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
+                                            <label class="custom-control-label txt2" for="3">コア
+                                                <select name="core_role" class="txt2 m-l-50" disabled>
+                                                    <option value="manager">Manager</option>
+                                                    <option value="leader">Leader</option>
+                                                    <option value="member" selected>Member</option>
+                                                    <option value="none">なし</option>
+                                                </select>
+                                            </label>
                                         </div>
                                     </div>
-
-                                    <div class="col-sm-7">
-                                        <span class="txt1 p-b-11">
-                                            所属組織 / ROLE
-                                        </span>
-                                        <div class="p-l-25">
-                                            <div class="custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="1" name="team_id" value="1">
-                                                <label class="custom-control-label txt2" for="1">法人
-                                                    <select name="hou_role" class="txt2 m-l-50" disabled>
-                                                        <option value="manager">Manager</option>
-                                                        <option value="leader">Leader</option>
-                                                        <option value="member" selected>Member</option>
-                                                        <option value="none">なし</option>
-                                                    </select>
-                                                </label>
-                                            </div>
-            
-                                            <div class="custom-checkbox m-d-1">
-                                                <input type="checkbox" class="custom-control-input" id="2" name="team_id" value="2">
-                                                <label class="custom-control-label txt2" for="2">個人
-                                                    <select name="ko_role" class="txt2 m-l-50" disabled>
-                                                        <option value="manager">Manager</option>
-                                                        <option value="leader">Leader</option>
-                                                        <option value="member" selected>Member</option>
-                                                        <option value="none">なし</option>
-                                                    </select>
-                                                </label>
-                                            </div>
-            
-                                            <div class="custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="3" name="team_id" value="3">
-                                                <label class="custom-control-label txt2" for="3">コア
-                                                    <select name="core_role" class="txt2 m-l-50" disabled>
-                                                        <option value="manager">Manager</option>
-                                                        <option value="leader">Leader</option>
-                                                        <option value="member" selected>Member</option>
-                                                        <option value="none">なし</option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-            
-
+                                
+                                </div>
+        
                                 <span class="txt1 p-b-11">
-                                    Email
+                                    E-mail
                                 </span>
                                 <div class="wrap-input100 m-b-12">
-                                    <input class="input100" type="text" name="email" >
+                                    <input class="input100" type="email" name="e-mail" >
                                     <span class="focus-input100"></span>
                                 </div>
 
@@ -151,7 +163,7 @@
                                     Password check
                                 </span>
                                 <div class="wrap-input100 m-b-12">
-                                    <input class="input100" type="password" name="password_check" >
+                                    <input class="input100" type="password" name="password_check" onpaste="javascript:return false;">
                                     <span class="focus-input100"></span>
                                 </div>
                             
