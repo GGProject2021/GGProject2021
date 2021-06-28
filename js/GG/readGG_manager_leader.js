@@ -35,32 +35,54 @@ window.onload = function() {
     
     //chart js
     //내용 바꿔야함 
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
+    var personalCtx = document.getElementById('personalChart').getContext('2d');
+    var personalChart = new Chart(personalCtx, {
+        type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
+            datasets:[{
+                type: 'line',
+                label: 'panda1',
+                data : [10,20,10,30,11],
+                backgroundColor :'rgba(54, 162, 235, 0.2)'
+            },{
+                type: 'line',
+                label: 'panda3',
+                data : [20,10,15,10,40],
+                backgroundColor :'rgba(255, 206, 86, 0.2)',
+            }],
+            labels: ['1st_sprint', '2nd_sprint', '3rd_sprint', '4th_sprint', '5th_sprint'],
+        },
+        
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    var teamCtx = document.getElementById('teamChart').getContext('2d');
+    var teamChart= new Chart(teamCtx, {
+        type: 'line',
+        data: {
+            labels: ['1st_sprint', '2nd_sprint', '3rd_sprint', '4th_sprint', '5th_sprint'],
+            datasets:[{
+                type: 'line',
+                label: 'GG(ActualTime)',
+                data: [15,15,13,20,22],
+                backgroundColor: 'rgba(255, 159, 64, 0.2)'
+            },{
+                type: 'line',
+                label: 'GG(WorkingHours)',
+                data: [18,18,20,22,26],
+                backgroundColor: 'rgba(153, 102, 255, 0.2)'
+            },{
+                type: 'line',
+                label: 'GG(BusinessDays)',
+                data: [2,2,4,6,8],
+                backgroundColor: 'rgba(255, 159, 64, 0.2)'
+            }],
         },
         options: {
             scales: {

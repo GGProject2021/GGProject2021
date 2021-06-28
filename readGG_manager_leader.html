@@ -232,15 +232,18 @@
                     <div class="inline_block_right">
                         <!--첫번째 선택한 날 부터 3개월씩만 볼 수 있도록 -->
                         <!--기간 설정시 값을 세션에 저장해야한다. 분석이나 다른 action시에도 유지될 수 있도록-->
-                        <form>
+                        <form class="setDate">
                             <div class="inline_block_left"><input type="date" class="form-control" id="first_date"  name="first_date"> </div>
                             <div class="inline_block_right"><p> ~ </p></div>
                             <div class="inline_block_right"><input type="date" class="form-control" id="second_date" name="second_date"></div>
+                            <div class="inline_block_right"><button type="submit" class="btn btn-primary">期間設定</button></div>
                         </form>
                     </div>   
                 </div>
-                <p class= "align_right">最初の日付から 3ヶ月まで検索可能。</p>
+                <p class= "align_right" id="setDateInfo">最初の日付から 3ヶ月まで検索可能。</p>
+                
                 <div class="GGanalysis_list_div">
+                    <!--임의 팀원GG분석-->
                     <h5 class="GGanalysis_list">各チーム員の成長率比較(actual time)</h5>
                     <form>
                         <div class="inline_block_left">
@@ -265,7 +268,17 @@
                             <button type="submit" class="btn btn-primary">設定</button>
                         </div>
                     </form>
-                    <canvas id="myChart" width="400" height="150"></canvas>
+                    
+                    <canvas id="personalChart" width="400" height="150"></canvas><br>
+                    <div class="align_right">
+                        <button class="btn btn-primary" >PNGで変換</button>
+                    </div><br><br>
+                    <!--팀 평균-->
+                    <h5 class="GGanalysis_list">法人チームGGの平均比較</h5>
+                    <canvas id="teamChart" width="400" height="150"></canvas><br>
+                    <div class="align_right">
+                        <button class="btn btn-primary" >PNGで変換</button>
+                    </div>
                 </div>
             </div><!--end of main-->
         </div>

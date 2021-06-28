@@ -61,7 +61,7 @@
     background-color:#ffe79e;
     border-bottom: 1px solid grey;
 }
-.align_right{
+.align_right, #align_right{
     text-align: right;
 }
 #inline_block_left{
@@ -126,11 +126,17 @@
     padding-right:20px;
     padding-bottom:50px;
 }
+.setDate button {
+    height:35px;
+}
 .GGanalysis_list_div select{
     width: 200px;
 }
+#setDateInfo {
+    color:grey;
+}
 .GGanalysis_list_div button{
-    width: 100px;
+    width: 120px;
     height: 35px;
 }
 .main_right{
