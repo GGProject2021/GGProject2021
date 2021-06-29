@@ -43,12 +43,14 @@ window.onload = function() {
                 type: 'line',
                 label: 'panda1',
                 data : [10,20,10,30,11],
-                backgroundColor :'rgba(54, 162, 235, 0.2)'
+                fill: false,
+                borderColor :'rgba(54, 162, 235)'
             },{
                 type: 'line',
                 label: 'panda3',
                 data : [20,10,15,10,40],
-                backgroundColor :'rgba(255, 206, 86, 0.2)',
+                fill: false,
+                borderColor :'rgba(255, 206, 86)',
             }],
             labels: ['1st_sprint', '2nd_sprint', '3rd_sprint', '4th_sprint', '5th_sprint'],
         },
@@ -71,17 +73,20 @@ window.onload = function() {
                 type: 'line',
                 label: 'GG(ActualTime)',
                 data: [15,15,13,20,22],
-                backgroundColor: 'rgba(255, 159, 64, 0.2)'
+                fill: false,
+                borderColor: 'rgba(255, 159, 64)'
             },{
                 type: 'line',
                 label: 'GG(WorkingHours)',
                 data: [18,18,20,22,26],
-                backgroundColor: 'rgba(153, 102, 255, 0.2)'
+                fill: false,
+                borderColor: 'rgba(153, 102, 255)'
             },{
                 type: 'line',
                 label: 'GG(BusinessDays)',
                 data: [2,2,4,6,8],
-                backgroundColor: 'rgba(255, 159, 64, 0.2)'
+                fill: false,
+                borderColor: 'rgba(75, 192, 192)'
             }],
         },
         options: {
