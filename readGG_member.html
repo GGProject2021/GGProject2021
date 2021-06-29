@@ -33,10 +33,10 @@
                         <!--team은 manager만 볼 수 있기 때문에 로그아웃상태에선 x-->
                         <li class="nav-item"><!--signup-->
 
-                            <button type="button" class="btn" onclick="location.href='signup.html'">Signup</button>
+                            <button type="button" class="btn" >Mypage</button>
                         </li>
                         <li class="nav-item"><!--login button-->
-                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='login.html'">Login</button>
+                            <button type="button" class="btn btn-primary" style="width:90px" onclick="location.href='login.html'">Logout</button>
                         </li>
                     </ul>
                 </div>
@@ -82,14 +82,8 @@
                     </tbody>
                 </table>
                 <button class="btn btn-light">検索画面に戻る</button>
-                <button class="btn btn-light">sprint修正</button>
                 <!--GG관리--><br>
-                <div class="inline_block_left">
-                    <h5 class="GGpage_list">GG管理</h5>
-                </div>
-                <div class="inline_block_right">
-                    <h5 class="head_count">4</h5>
-                </div>
+                <h5 class="GGpage_list">GG管理</h5>
                 <br>
                 <div class="space_between">
                     <div>
@@ -148,54 +142,6 @@
                                 <a href="">削除</a>
                             </td>
                         </tr>
-                        <tr class="GG_table_tr">
-                            <td class="GG_info">panda2</td>
-                            <td class="GG_info">1</td>
-                            <td class="GG_info">2</td>
-                            <td class="GG_info">3</td>
-                            <td class="GG_info">4</td>
-                            <td class="GG_info">5</td>
-                            <td class="GG_info">5</td>
-                            <td class="GG">6</td>
-                            <td class="GG">7</td>
-                            <td class="GG">8</td>
-                            <td class="GG_table_td">
-                                <a href="">修正</a>
-                                <a href="">削除</a>
-                            </td>
-                        </tr>
-                        <tr class="GG_table_tr">
-                            <td class="GG_info">panda3</td>
-                            <td class="GG_info">1</td>
-                            <td class="GG_info">2</td>
-                            <td class="GG_info">3</td>
-                            <td class="GG_info">4</td>
-                            <td class="GG_info">5</td>
-                            <td class="GG_info">5</td>
-                            <td class="GG">6</td>
-                            <td class="GG">7</td>
-                            <td class="GG">8</td>
-                            <td class="GG_table_td">
-                                <a href="">修正</a>
-                                <a href="">削除</a>
-                            </td>
-                        </tr>
-                        <tr class="GG_table_tr">
-                            <td class="GG_info">panda4</td>
-                            <td class="GG_info">1</td>
-                            <td class="GG_info">2</td>
-                            <td class="GG_info">3</td>
-                            <td class="GG_info">4</td>
-                            <td class="GG_info">5</td>
-                            <td class="GG_info">5</td>
-                            <td class="GG">6</td>
-                            <td class="GG">7</td>
-                            <td class="GG">8</td>
-                            <td class="GG_table_td">
-                                <a href="">修正</a>
-                                <a href="">削除</a>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
                 <!--코멘트-->
@@ -209,25 +155,14 @@
                             <th>マネージャーB   非資産化プロジェクトも加算   2020/12/25</th>
                         </tr>
                         <tr>
-                            <th> マネージャーA  確認。   2020/12/26 
-                                <a href="">修正</a>
-                                <a href="">削除</a>
-                            </th>
+                            <th> マネージャーA  確認。   2020/12/26 </th>
                         </tr>
                     </tbody>
                 </table>
-                <form class="coment">
-                    <div class="inline_block_left">
-                        <input type="text" class="form-control" name="coment" placeholder="コメントを書いてください">
-                    </div>
-                    <div class="inline_block_right">
-                        <button type="submit" class="btn btn-light">登録</button>
-                    </div>
-                </form>
                 <h5 class="GGpage_list" id="GGanalysis">GG分析</h5>
                 <div class="space_between">
                     <div class="inline_block_left">
-                        <p>法人チームのGGチャート</p>
+                        <p>パンダ様のGGチャート</p>
                     </div>
                     <div class="inline_block_right">
                         <!--첫번째 선택한 날 부터 3개월씩만 볼 수 있도록 -->
@@ -243,32 +178,9 @@
                 <p class= "align_right" id="setDateInfo">最初の日付から 3ヶ月まで検索可能。</p>
                 
                 <div class="GGanalysis_list_div">
-                    <!--임의 팀원GG분석-->
-                    <h5 class="GGanalysis_list">各チーム員の成長率比較(actual time)</h5>
-                    <form>
-                        <div class="inline_block_left">
-                            <select class="form-control" id="employee_name_1">
-                                <!--개발시 밸류값은 사원의 id로 변경 될 것-->
-                                <option value="1" selected>panda1</option>
-                                <option value="2">panda2</option>
-                                <option value="3">panda3</option>
-                                <option value="4">panda4</option>
-                            </select>
-                        </div>
-                        <div class="inline_block_right">
-                            <select class="form-control" id="employee_name_2">
-                                <!--개발시 밸류값은 사원의 id로 변경 될 것-->
-                                <option value="1">panda1</option>
-                                <option value="2">panda2</option>
-                                <option value="3" selected>panda3</option>
-                                <option value="4">panda4</option>
-                         </select>
-                        </div>
-                        <div class="inline_block_right">
-                            <button type="submit" class="btn btn-primary">設定</button>
-                        </div>
-                    </form>
-                    
+                    <!--본인GG분석-->
+                    <h5 class="GGanalysis_list">パンダ様のGG比較</h5>
+                   
                     <canvas id="personalChart" width="400" height="150"></canvas><br>
                     <div class="align_right">
                         <button class="btn btn-primary" >PNGで変換</button>
