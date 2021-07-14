@@ -86,7 +86,7 @@ th .form-control{
 .center_div{
     text-align: center;
 }
-.support_div_2 ,.support_radio_2{
+.support_div , .support_radio , .support_div_2 ,.support_radio_2{
     display: '';
 }
 .support_div_3 , .support_radio_3{
@@ -106,12 +106,11 @@ th .form-control{
     text-align:center;
     
 }
-.close_support_form_2> a , .close_support_form_3> a{
+.close_support_form> a , .close_support_form_2> a , .close_support_form_3> a{
     display:inline-block;
     margin-left:10px;
     color:red;
 }
-.close_support_form_2> a:link , .close_support_form_3> a:link .close_support_form_2> a:visited , .close_support_form_3> a:visited{
+.close_support_form> a:link ,.close_support_form_2> a:link , .close_support_form_3> a:link .close_support_form_2> a:visited , .close_support_form_3> a:visited{
     color:red;
 }
-
