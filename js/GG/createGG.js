@@ -6,11 +6,12 @@ window.onload = function(){
         if(document.querySelector('.support_div').style.display != "table-row" ){
             document.querySelector('.support_div').style.display = "table-row";
             document.querySelector('.support_radio').style.display = "table-row";
-        }else if(document.querySelector('.support_div_2').style.display != "table_row"){
+        }else if(document.querySelector('.support_div_2').style.display != "table-row"){
             document.querySelector('.support_div_2').style.display = "table-row";
             document.querySelector('.support_radio_2').style.display = "table-row";
         }else{
             alert("他部署は2つまで追加できます。");
+      
         }
         
         // if(document.querySelector('.support_div_2').style.display == ""){
