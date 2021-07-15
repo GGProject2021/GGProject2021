@@ -167,6 +167,16 @@
                     </div><br><br>
                     <!--팀 평균-->
                     <h5 class="GGanalysis_list">法人チームGGの平均比較</h5>
+                    <form>    
+                        <div class="inline_block_left">
+                            <input type="radio" name="analysis_section" value="consumer_section">個人
+                            <input type="radio" class="radio_sort" name="analysis_section" value="coporate_section">法人
+                            <input type="radio" class="radio_sort" name="analysis_section" value="core_section" disabled>コア
+                        </div>
+                        <div class="inline_block_right">
+                            <button type="submit" class="btn btn-primary">部署選択</button>
+                        </div>
+                    </form>
                     <canvas id="teamChart" width="400" height="150"></canvas><br>
                     <div class="align_right">
                         <button class="btn btn-primary" >PNGで変換</button>
